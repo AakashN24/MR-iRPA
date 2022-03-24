@@ -1,0 +1,159 @@
+{
+  "uid" : "e4e1da29-1cd0-4a33-a69f-0decf92d6c89",
+  "name" : "hcl-mr-createNotifications-bot4",
+  "identifier" : "hclmrcreateNotificationsbot4",
+  "type" : "automation",
+  "visibility" : true,
+  "activated" : true,
+  "header" : {
+    "inputs" : [ {
+      "description" : "",
+      "identifier" : "path",
+      "type" : "simple",
+      "typeName" : "string",
+      "typeValue" : "string",
+      "dimension" : 0,
+      "container" : null
+    } ],
+    "outputs" : [ {
+      "description" : "",
+      "identifier" : "CreatedNotifications",
+      "type" : "simple",
+      "typeName" : "string",
+      "typeValue" : "string",
+      "dimension" : 1,
+      "container" : null
+    } ],
+    "maxDuration" : 600,
+    "maxActivityDuration" : 30,
+    "triggerable" : true,
+    "hasAddJobSubAutomations" : false,
+    "hasAlerts" : false,
+    "scriptUids" : [ "a4be455f-9d4a-4d93-b2d0-fb736481bb97", "d533b143-fa0b-4489-bd30-7c13eff4ec5a", "707c386d-4b48-486a-bb37-f71c7e36e5ce", "3060ba9f-0117-4b69-9e17-37b334f87ef9", "43146a37-ca80-405b-a0e9-cdc9b83307b5", "b4543480-82a6-4b37-aa1d-d28510b7f56e", "934d7959-6df9-4b46-aa30-c63ad7f4b511" ]
+  },
+  "buildHeader" : {
+    "input" : {
+      "$schema" : "http://json-schema.org/draft-07/schema#",
+      "type" : "object",
+      "properties" : {
+        "path" : {
+          "type" : "string",
+          "description" : ""
+        }
+      }
+    },
+    "output" : {
+      "$schema" : "http://json-schema.org/draft-07/schema#",
+      "type" : "object",
+      "properties" : {
+        "CreatedNotifications" : {
+          "description" : "",
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "internalUid" : null,
+    "triggerable" : true,
+    "maxDuration" : 600,
+    "maxActivityDuration" : 30
+  },
+  "validity" : true,
+  "dependencies" : [ {
+    "artifactUid" : "079265fd-0cc3-37ff-9896-ef34682a481b",
+    "artifactContainerUid" : "2397df40-9756-4109-ac86-39ba2d23891c",
+    "packageUid" : "105f6259-cdaf-414b-86ea-5bc670448046",
+    "packageAlias" : "irpa_excel"
+  }, {
+    "artifactUid" : "08932019-52df-3d41-8347-421faed14de4",
+    "artifactContainerUid" : "acead2d5-1351-495f-9d6d-9b49aba227eb",
+    "packageUid" : "2dbcfd22-58ea-49a2-99d6-005f5bb902c3",
+    "packageAlias" : "irpa_core"
+  }, {
+    "artifactUid" : "9cab8902-34c3-37f9-a6bb-8e55279e5195",
+    "artifactContainerUid" : "acead2d5-1351-495f-9d6d-9b49aba227eb",
+    "packageUid" : "2dbcfd22-58ea-49a2-99d6-005f5bb902c3",
+    "packageAlias" : "irpa_core"
+  }, {
+    "artifactUid" : "9d97d190-ddae-3b68-bf21-ac94e6bc05e4",
+    "artifactContainerUid" : "2397df40-9756-4109-ac86-39ba2d23891c",
+    "packageUid" : "105f6259-cdaf-414b-86ea-5bc670448046",
+    "packageAlias" : "irpa_excel"
+  }, {
+    "artifactUid" : "aab5ad95-d8dd-3ea2-b24d-17c88b53b37c",
+    "artifactContainerUid" : "acead2d5-1351-495f-9d6d-9b49aba227eb",
+    "packageUid" : "2dbcfd22-58ea-49a2-99d6-005f5bb902c3",
+    "packageAlias" : "irpa_core"
+  }, {
+    "artifactUid" : "ad8424e5-0004-31e8-b7c2-cd871847e3e3",
+    "artifactContainerUid" : "2397df40-9756-4109-ac86-39ba2d23891c",
+    "packageUid" : "105f6259-cdaf-414b-86ea-5bc670448046",
+    "packageAlias" : "irpa_excel"
+  }, {
+    "artifactUid" : "b2b39969-be3a-32e5-b4cb-3ebfacb6d3e5",
+    "artifactContainerUid" : "2397df40-9756-4109-ac86-39ba2d23891c",
+    "packageUid" : "105f6259-cdaf-414b-86ea-5bc670448046",
+    "packageAlias" : "irpa_excel"
+  }, {
+    "artifactUid" : "ed521d70-d2b5-3286-848b-8acd783a6b43",
+    "artifactContainerUid" : "acead2d5-1351-495f-9d6d-9b49aba227eb",
+    "packageUid" : "2dbcfd22-58ea-49a2-99d6-005f5bb902c3",
+    "packageAlias" : "irpa_core"
+  } ],
+  "access" : "default",
+  "contents" : [ {
+    "uid" : "34408254-0c92-4c63-969a-73e55f7c9547",
+    "name" : "3060ba9f-0117-4b69-9e17-37b334f87ef9",
+    "mimeType" : "application/json",
+    "size" : 573,
+    "lastUpdateRelease" : "2203.00"
+  }, {
+    "uid" : "150bcaa0-c5a8-4022-ad17-343fb1f5cf6c",
+    "name" : "43146a37-ca80-405b-a0e9-cdc9b83307b5",
+    "mimeType" : "application/json",
+    "size" : 679,
+    "lastUpdateRelease" : "2203.00"
+  }, {
+    "uid" : "4052d0af-177f-4dd7-b642-12494d9f44dd",
+    "name" : "707c386d-4b48-486a-bb37-f71c7e36e5ce",
+    "mimeType" : "application/json",
+    "size" : 39,
+    "lastUpdateRelease" : "2203.00"
+  }, {
+    "uid" : "127b8d11-8be5-4bd4-983e-e1cb738ddec1",
+    "name" : "934d7959-6df9-4b46-aa30-c63ad7f4b511",
+    "mimeType" : "application/json",
+    "size" : 685,
+    "lastUpdateRelease" : "2203.00"
+  }, {
+    "uid" : "85f589ba-dfa6-4498-b046-c4ee0532d9a7",
+    "name" : "a4be455f-9d4a-4d93-b2d0-fb736481bb97",
+    "mimeType" : "application/json",
+    "size" : 595,
+    "lastUpdateRelease" : "2203.00"
+  }, {
+    "uid" : "94e375d7-1e22-401a-89d6-daa06611867e",
+    "name" : "b4543480-82a6-4b37-aa1d-d28510b7f56e",
+    "mimeType" : "application/json",
+    "size" : 706,
+    "lastUpdateRelease" : "2203.00"
+  }, {
+    "uid" : "d3d725ab-4b86-4707-b130-e16a370b6da0",
+    "name" : "content",
+    "mimeType" : "application/json",
+    "size" : 67427,
+    "lastUpdateRelease" : "2203.00"
+  }, {
+    "uid" : "d7bbd771-c81c-4af7-99e1-edf6d579f340",
+    "name" : "d533b143-fa0b-4489-bd30-7c13eff4ec5a",
+    "mimeType" : "application/json",
+    "size" : 675,
+    "lastUpdateRelease" : "2203.00"
+  } ],
+  "exportRelease" : "2203.01",
+  "lastHeaderUpdateRelease" : "2202.04",
+  "submittable" : true,
+  "mode" : "managed"
+}

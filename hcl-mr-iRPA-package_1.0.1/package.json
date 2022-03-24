@@ -1,0 +1,55 @@
+{
+  "archiveCreation" : "2022-03-24T10:05:14.611Z",
+  "packageUid" : "0ebcb6b4-825e-4f10-8572-c2c8066319cb",
+  "packageName" : "hcl-mr-iRPA-package",
+  "originTenantUid" : "1e1c5636-e403-45a5-8a83-c22ee679f342",
+  "versionUid" : "5ed9a5b8-dc37-42fb-9a61-b5ce49e5895a",
+  "versionStatus" : "released",
+  "versions" : {
+    "major" : 1,
+    "minor" : 0,
+    "patch" : 1
+  },
+  "betaVersion" : false,
+  "businessType" : "BUSINESS_CONTENT",
+  "packageDependencies" : [ {
+    "alias" : "irpa_excel",
+    "packageUid" : "105f6259-cdaf-414b-86ea-5bc670448046",
+    "packageVersionUid" : "2397df40-9756-4109-ac86-39ba2d23891c",
+    "packageName" : "SAP Intelligent RPA Excel SDK",
+    "versions" : {
+      "major" : 1,
+      "minor" : 21,
+      "patch" : 57
+    },
+    "importOrigin" : 1
+  }, {
+    "alias" : "irpa_core",
+    "packageUid" : "2dbcfd22-58ea-49a2-99d6-005f5bb902c3",
+    "packageVersionUid" : "acead2d5-1351-495f-9d6d-9b49aba227eb",
+    "packageName" : "SAP Intelligent RPA Core SDK",
+    "versions" : {
+      "major" : 1,
+      "minor" : 21,
+      "patch" : 57
+    },
+    "importOrigin" : 1
+  }, {
+    "alias" : "irpa_outlook",
+    "packageUid" : "e5dadd38-93e2-423a-8126-69aecb04b92b",
+    "packageVersionUid" : "ef9e058a-4572-4697-a135-437259619475",
+    "packageName" : "SAP Intelligent RPA Outlook SDK",
+    "versions" : {
+      "major" : 1,
+      "minor" : 21,
+      "patch" : 57
+    },
+    "importOrigin" : 1
+  } ],
+  "requirements" : [ {
+    "key" : "irpa_target_software_version",
+    "value" : "[{\"major\":2,\"minor\":0,\"patch\":18,\"platform\":\"WIN\",\"minSdkCoreVersion\":{\"major\":1,\"minor\":5,\"patch\":0}}]"
+  } ],
+  "exportRelease" : "2203.01",
+  "creationRelease" : "2203.01"
+}

@@ -1,0 +1,157 @@
+{
+  "uid" : "3a383d65-8f18-47ae-b9dd-8e8ed465346b",
+  "name" : "hcl-mr- readEmail-bot1",
+  "identifier" : "hclmrReadEmailbot1",
+  "type" : "automation",
+  "visibility" : true,
+  "activated" : true,
+  "header" : {
+    "inputs" : [ {
+      "description" : "",
+      "identifier" : "path",
+      "type" : "simple",
+      "typeName" : "string",
+      "typeValue" : "string",
+      "dimension" : 0,
+      "container" : null
+    } ],
+    "outputs" : [ ],
+    "maxDuration" : 600,
+    "maxActivityDuration" : 30,
+    "triggerable" : true,
+    "hasAddJobSubAutomations" : false,
+    "hasAlerts" : false,
+    "scriptUids" : [ "a72ed5ac-4f27-403c-8268-d62c4295c5bd", "f9237743-de6b-4b68-9c90-daafc16942db", "38da3ba5-cfa3-4532-a279-248bf4060592", "681dee97-cd69-4222-b0d5-8d31a129240f", "49259d88-51c3-456f-8c1b-6ce7fff4b586" ]
+  },
+  "buildHeader" : {
+    "input" : {
+      "$schema" : "http://json-schema.org/draft-07/schema#",
+      "type" : "object",
+      "properties" : {
+        "path" : {
+          "type" : "string",
+          "description" : ""
+        }
+      }
+    },
+    "output" : {
+      "$schema" : "http://json-schema.org/draft-07/schema#",
+      "type" : "object",
+      "properties" : { }
+    },
+    "internalUid" : null,
+    "triggerable" : true,
+    "maxDuration" : 600,
+    "maxActivityDuration" : 30
+  },
+  "validity" : true,
+  "dependencies" : [ {
+    "artifactUid" : "079265fd-0cc3-37ff-9896-ef34682a481b",
+    "artifactContainerUid" : "2397df40-9756-4109-ac86-39ba2d23891c",
+    "packageUid" : "105f6259-cdaf-414b-86ea-5bc670448046",
+    "packageAlias" : "irpa_excel"
+  }, {
+    "artifactUid" : "0910ad8f-837e-3a27-aa91-b0efb0dc8faf",
+    "artifactContainerUid" : "ef9e058a-4572-4697-a135-437259619475",
+    "packageUid" : "e5dadd38-93e2-423a-8126-69aecb04b92b",
+    "packageAlias" : "irpa_outlook"
+  }, {
+    "artifactUid" : "3d71a912-e5ca-3cab-9e96-cc170b200ba4",
+    "artifactContainerUid" : "ef9e058a-4572-4697-a135-437259619475",
+    "packageUid" : "e5dadd38-93e2-423a-8126-69aecb04b92b",
+    "packageAlias" : "irpa_outlook"
+  }, {
+    "artifactUid" : "4170745d-4d33-302c-85f9-0e8fec8da65c",
+    "artifactContainerUid" : "ef9e058a-4572-4697-a135-437259619475",
+    "packageUid" : "e5dadd38-93e2-423a-8126-69aecb04b92b",
+    "packageAlias" : "irpa_outlook"
+  }, {
+    "artifactUid" : "72ac3c04-38a6-3298-92bb-fe2ef0a27750",
+    "artifactContainerUid" : "ef9e058a-4572-4697-a135-437259619475",
+    "packageUid" : "e5dadd38-93e2-423a-8126-69aecb04b92b",
+    "packageAlias" : "irpa_outlook"
+  }, {
+    "artifactUid" : "72f51c6b-7e32-4c08-b863-46dc89556eac",
+    "artifactContainerUid" : "5ed9a5b8-dc37-42fb-9a61-b5ce49e5895a"
+  }, {
+    "artifactUid" : "9cab8902-34c3-37f9-a6bb-8e55279e5195",
+    "artifactContainerUid" : "acead2d5-1351-495f-9d6d-9b49aba227eb",
+    "packageUid" : "2dbcfd22-58ea-49a2-99d6-005f5bb902c3",
+    "packageAlias" : "irpa_core"
+  }, {
+    "artifactUid" : "9d97d190-ddae-3b68-bf21-ac94e6bc05e4",
+    "artifactContainerUid" : "2397df40-9756-4109-ac86-39ba2d23891c",
+    "packageUid" : "105f6259-cdaf-414b-86ea-5bc670448046",
+    "packageAlias" : "irpa_excel"
+  }, {
+    "artifactUid" : "aab5ad95-d8dd-3ea2-b24d-17c88b53b37c",
+    "artifactContainerUid" : "acead2d5-1351-495f-9d6d-9b49aba227eb",
+    "packageUid" : "2dbcfd22-58ea-49a2-99d6-005f5bb902c3",
+    "packageAlias" : "irpa_core"
+  }, {
+    "artifactUid" : "ad8424e5-0004-31e8-b7c2-cd871847e3e3",
+    "artifactContainerUid" : "2397df40-9756-4109-ac86-39ba2d23891c",
+    "packageUid" : "105f6259-cdaf-414b-86ea-5bc670448046",
+    "packageAlias" : "irpa_excel"
+  }, {
+    "artifactUid" : "b2b39969-be3a-32e5-b4cb-3ebfacb6d3e5",
+    "artifactContainerUid" : "2397df40-9756-4109-ac86-39ba2d23891c",
+    "packageUid" : "105f6259-cdaf-414b-86ea-5bc670448046",
+    "packageAlias" : "irpa_excel"
+  }, {
+    "artifactUid" : "d8bd0364-e083-49a9-85f9-22d929f13dde",
+    "artifactContainerUid" : "5ed9a5b8-dc37-42fb-9a61-b5ce49e5895a"
+  }, {
+    "artifactUid" : "ed521d70-d2b5-3286-848b-8acd783a6b43",
+    "artifactContainerUid" : "acead2d5-1351-495f-9d6d-9b49aba227eb",
+    "packageUid" : "2dbcfd22-58ea-49a2-99d6-005f5bb902c3",
+    "packageAlias" : "irpa_core"
+  }, {
+    "artifactUid" : "f2fee1f4-25ef-3451-a66b-11b328ea34f4",
+    "artifactContainerUid" : "acead2d5-1351-495f-9d6d-9b49aba227eb",
+    "packageUid" : "2dbcfd22-58ea-49a2-99d6-005f5bb902c3",
+    "packageAlias" : "irpa_core"
+  } ],
+  "access" : "default",
+  "contents" : [ {
+    "uid" : "8041944d-6ccd-4d5f-be95-b0b958362358",
+    "name" : "38da3ba5-cfa3-4532-a279-248bf4060592",
+    "mimeType" : "application/json",
+    "size" : 616,
+    "lastUpdateRelease" : "2203.00"
+  }, {
+    "uid" : "dd1fc39e-2b70-4335-85ee-a7375e2a8fd6",
+    "name" : "49259d88-51c3-456f-8c1b-6ce7fff4b586",
+    "mimeType" : "application/json",
+    "size" : 629,
+    "lastUpdateRelease" : "2203.00"
+  }, {
+    "uid" : "e0ed8156-b73c-48d9-8432-8c3d0d484737",
+    "name" : "681dee97-cd69-4222-b0d5-8d31a129240f",
+    "mimeType" : "application/json",
+    "size" : 669,
+    "lastUpdateRelease" : "2203.00"
+  }, {
+    "uid" : "9693c5d7-9d29-431c-8410-c267305ef3df",
+    "name" : "a72ed5ac-4f27-403c-8268-d62c4295c5bd",
+    "mimeType" : "application/json",
+    "size" : 148,
+    "lastUpdateRelease" : "2203.00"
+  }, {
+    "uid" : "e3a5ba1a-2656-4f15-bb8f-b13d61944c33",
+    "name" : "content",
+    "mimeType" : "application/json",
+    "size" : 91410,
+    "lastUpdateRelease" : "2203.01"
+  }, {
+    "uid" : "e0b10500-5027-4194-a5ed-87c42e211162",
+    "name" : "f9237743-de6b-4b68-9c90-daafc16942db",
+    "mimeType" : "application/json",
+    "size" : 544,
+    "lastUpdateRelease" : "2203.00"
+  } ],
+  "exportRelease" : "2203.01",
+  "lastHeaderUpdateRelease" : "2202.03",
+  "submittable" : true,
+  "mode" : "managed"
+}

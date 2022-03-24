@@ -1,0 +1,176 @@
+{
+  "uid" : "0fc138a4-95e2-4aaf-af58-371aefe3c7a4",
+  "name" : "hcl-mr-createWorkItems-bot3",
+  "identifier" : "hclmrcreateWorkItemsbot3",
+  "type" : "automation",
+  "visibility" : true,
+  "activated" : true,
+  "header" : {
+    "inputs" : [ {
+      "description" : "",
+      "identifier" : "path",
+      "type" : "simple",
+      "typeName" : "string",
+      "typeValue" : "string",
+      "dimension" : 0,
+      "container" : null
+    } ],
+    "outputs" : [ {
+      "description" : "",
+      "identifier" : "Result",
+      "type" : "simple",
+      "typeName" : "string",
+      "typeValue" : "string",
+      "dimension" : 1,
+      "container" : null
+    } ],
+    "maxDuration" : 600,
+    "maxActivityDuration" : 30,
+    "triggerable" : true,
+    "hasAddJobSubAutomations" : false,
+    "hasAlerts" : false,
+    "scriptUids" : [ "498da63c-4a06-438e-a01b-6c6efaf48150", "c9b3e3fb-f3fa-44eb-a4b1-8f4e8c01e3ae", "5c530386-db2a-487d-bec8-974b6abb545e", "0c74c43c-316b-4f9f-a7b4-338e69efbdee", "94d8ae6d-7e01-4825-8b88-aef51fa04a0e", "0dcb0546-17b5-44c6-bd75-588ab28c513a", "4708c373-9b61-4805-8eb2-8976fb2eaca8", "8c7d190a-76a1-4886-9e39-550cbc5dbf96" ]
+  },
+  "buildHeader" : {
+    "input" : {
+      "$schema" : "http://json-schema.org/draft-07/schema#",
+      "type" : "object",
+      "properties" : {
+        "path" : {
+          "type" : "string",
+          "description" : ""
+        }
+      }
+    },
+    "output" : {
+      "$schema" : "http://json-schema.org/draft-07/schema#",
+      "type" : "object",
+      "properties" : {
+        "Result" : {
+          "description" : "",
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "internalUid" : null,
+    "triggerable" : true,
+    "maxDuration" : 600,
+    "maxActivityDuration" : 30
+  },
+  "validity" : true,
+  "dependencies" : [ {
+    "artifactUid" : "079265fd-0cc3-37ff-9896-ef34682a481b",
+    "artifactContainerUid" : "2397df40-9756-4109-ac86-39ba2d23891c",
+    "packageUid" : "105f6259-cdaf-414b-86ea-5bc670448046",
+    "packageAlias" : "irpa_excel"
+  }, {
+    "artifactUid" : "08932019-52df-3d41-8347-421faed14de4",
+    "artifactContainerUid" : "acead2d5-1351-495f-9d6d-9b49aba227eb",
+    "packageUid" : "2dbcfd22-58ea-49a2-99d6-005f5bb902c3",
+    "packageAlias" : "irpa_core"
+  }, {
+    "artifactUid" : "6ad88e1e-3213-4537-b97e-70b63e454947",
+    "artifactContainerUid" : "5ed9a5b8-dc37-42fb-9a61-b5ce49e5895a"
+  }, {
+    "artifactUid" : "9cab8902-34c3-37f9-a6bb-8e55279e5195",
+    "artifactContainerUid" : "acead2d5-1351-495f-9d6d-9b49aba227eb",
+    "packageUid" : "2dbcfd22-58ea-49a2-99d6-005f5bb902c3",
+    "packageAlias" : "irpa_core"
+  }, {
+    "artifactUid" : "9d97d190-ddae-3b68-bf21-ac94e6bc05e4",
+    "artifactContainerUid" : "2397df40-9756-4109-ac86-39ba2d23891c",
+    "packageUid" : "105f6259-cdaf-414b-86ea-5bc670448046",
+    "packageAlias" : "irpa_excel"
+  }, {
+    "artifactUid" : "aab5ad95-d8dd-3ea2-b24d-17c88b53b37c",
+    "artifactContainerUid" : "acead2d5-1351-495f-9d6d-9b49aba227eb",
+    "packageUid" : "2dbcfd22-58ea-49a2-99d6-005f5bb902c3",
+    "packageAlias" : "irpa_core"
+  }, {
+    "artifactUid" : "ad8424e5-0004-31e8-b7c2-cd871847e3e3",
+    "artifactContainerUid" : "2397df40-9756-4109-ac86-39ba2d23891c",
+    "packageUid" : "105f6259-cdaf-414b-86ea-5bc670448046",
+    "packageAlias" : "irpa_excel"
+  }, {
+    "artifactUid" : "b2b39969-be3a-32e5-b4cb-3ebfacb6d3e5",
+    "artifactContainerUid" : "2397df40-9756-4109-ac86-39ba2d23891c",
+    "packageUid" : "105f6259-cdaf-414b-86ea-5bc670448046",
+    "packageAlias" : "irpa_excel"
+  }, {
+    "artifactUid" : "b7802058-7627-4d1a-bf98-4d3ae72e5005",
+    "artifactContainerUid" : "5ed9a5b8-dc37-42fb-9a61-b5ce49e5895a"
+  }, {
+    "artifactUid" : "ed521d70-d2b5-3286-848b-8acd783a6b43",
+    "artifactContainerUid" : "acead2d5-1351-495f-9d6d-9b49aba227eb",
+    "packageUid" : "2dbcfd22-58ea-49a2-99d6-005f5bb902c3",
+    "packageAlias" : "irpa_core"
+  }, {
+    "artifactUid" : "f2fee1f4-25ef-3451-a66b-11b328ea34f4",
+    "artifactContainerUid" : "acead2d5-1351-495f-9d6d-9b49aba227eb",
+    "packageUid" : "2dbcfd22-58ea-49a2-99d6-005f5bb902c3",
+    "packageAlias" : "irpa_core"
+  } ],
+  "access" : "default",
+  "contents" : [ {
+    "uid" : "47bb33b4-57b2-441d-9e03-8c4d50377a4e",
+    "name" : "0c74c43c-316b-4f9f-a7b4-338e69efbdee",
+    "mimeType" : "application/json",
+    "size" : 582,
+    "lastUpdateRelease" : "2203.00"
+  }, {
+    "uid" : "25949886-7a45-4eef-9eb5-31981b096f89",
+    "name" : "0dcb0546-17b5-44c6-bd75-588ab28c513a",
+    "mimeType" : "application/json",
+    "size" : 634,
+    "lastUpdateRelease" : "2203.00"
+  }, {
+    "uid" : "35ca30c8-e85b-4d50-b742-12e21556b3aa",
+    "name" : "4708c373-9b61-4805-8eb2-8976fb2eaca8",
+    "mimeType" : "application/json",
+    "size" : 729,
+    "lastUpdateRelease" : "2203.00"
+  }, {
+    "uid" : "3cece36e-57ef-491a-ab96-8dd172d99d36",
+    "name" : "498da63c-4a06-438e-a01b-6c6efaf48150",
+    "mimeType" : "application/json",
+    "size" : 565,
+    "lastUpdateRelease" : "2203.00"
+  }, {
+    "uid" : "a88dbc91-c06c-45da-b093-46f43519c65f",
+    "name" : "5c530386-db2a-487d-bec8-974b6abb545e",
+    "mimeType" : "application/json",
+    "size" : 1245,
+    "lastUpdateRelease" : "2203.00"
+  }, {
+    "uid" : "08126015-ffd8-4651-97f2-2dbdd0436f36",
+    "name" : "8c7d190a-76a1-4886-9e39-550cbc5dbf96",
+    "mimeType" : "application/json",
+    "size" : 679,
+    "lastUpdateRelease" : "2203.00"
+  }, {
+    "uid" : "3a7ee165-ab8a-4095-93db-49fb54a87b54",
+    "name" : "94d8ae6d-7e01-4825-8b88-aef51fa04a0e",
+    "mimeType" : "application/json",
+    "size" : 627,
+    "lastUpdateRelease" : "2203.00"
+  }, {
+    "uid" : "72e84e12-aae5-41d5-afaf-6ed8a9469e2d",
+    "name" : "c9b3e3fb-f3fa-44eb-a4b1-8f4e8c01e3ae",
+    "mimeType" : "application/json",
+    "size" : 698,
+    "lastUpdateRelease" : "2203.00"
+  }, {
+    "uid" : "1da18f91-3bac-4d71-b54b-e2e66da780d2",
+    "name" : "content",
+    "mimeType" : "application/json",
+    "size" : 244546,
+    "lastUpdateRelease" : "2203.00"
+  } ],
+  "exportRelease" : "2203.01",
+  "lastHeaderUpdateRelease" : "2202.03",
+  "submittable" : true,
+  "mode" : "managed"
+}

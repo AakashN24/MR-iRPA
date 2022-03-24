@@ -1,0 +1,68 @@
+{
+  "uid" : "ea369a14-f794-44a8-b43a-47b073529ba9",
+  "name" : "mailData",
+  "identifier" : "mailData",
+  "type" : "datatype",
+  "visibility" : true,
+  "activated" : true,
+  "header" : {
+    "$schema" : "http://json-schema.org/draft-07/schema#",
+    "type" : "object",
+    "title" : "mailData",
+    "properties" : {
+      "BuisnessPartner" : {
+        "type" : "string",
+        "uid" : "8c2583a4-f915-48de-8f67-976f76d7e219"
+      },
+      "BuisnessPartnerName" : {
+        "type" : "string",
+        "uid" : "d362e6f1-996c-4774-8ca2-498bd66835f7"
+      },
+      "mrNo" : {
+        "type" : "string",
+        "uid" : "c89820a6-3938-42d0-b741-59c42799cb3f"
+      },
+      "RevisionNumber" : {
+        "type" : "string",
+        "uid" : "100ddd86-2da8-424c-843d-5377bff35879"
+      },
+      "ID" : {
+        "type" : "string",
+        "uid" : "eacdd619-a107-48a9-87e5-33cabe37b662"
+      }
+    }
+  },
+  "buildHeader" : {
+    "$schema" : "http://json-schema.org/draft-07/schema#",
+    "type" : "object",
+    "title" : "mailData",
+    "properties" : {
+      "BuisnessPartner" : {
+        "type" : "string",
+        "uid" : "8c2583a4-f915-48de-8f67-976f76d7e219"
+      },
+      "BuisnessPartnerName" : {
+        "type" : "string",
+        "uid" : "d362e6f1-996c-4774-8ca2-498bd66835f7"
+      },
+      "mrNo" : {
+        "type" : "string",
+        "uid" : "c89820a6-3938-42d0-b741-59c42799cb3f"
+      },
+      "RevisionNumber" : {
+        "type" : "string",
+        "uid" : "100ddd86-2da8-424c-843d-5377bff35879"
+      },
+      "ID" : {
+        "type" : "string",
+        "uid" : "eacdd619-a107-48a9-87e5-33cabe37b662"
+      }
+    }
+  },
+  "validity" : true,
+  "access" : "default",
+  "exportRelease" : "2203.01",
+  "lastHeaderUpdateRelease" : "2203.00",
+  "submittable" : true,
+  "mode" : "managed"
+}

@@ -1,0 +1,60 @@
+{
+  "uid" : "d8bd0364-e083-49a9-85f9-22d929f13dde",
+  "name" : "MROServiceInfoBlock",
+  "identifier" : "mROServiceInfoBlock",
+  "type" : "datatype",
+  "visibility" : true,
+  "activated" : true,
+  "header" : {
+    "$schema" : "http://json-schema.org/draft-07/schema#",
+    "type" : "object",
+    "title" : "MROServiceInfoBlock",
+    "properties" : {
+      "MaintRequestNo" : {
+        "type" : "string",
+        "uid" : "d2793f00-bd59-4584-a461-8ca37d00b442"
+      },
+      "BusinessPartner" : {
+        "type" : "string",
+        "uid" : "e2c54304-e693-4e20-a398-7f885deafc1a"
+      },
+      "BusinessPartnerName" : {
+        "type" : "string",
+        "uid" : "ac8e5227-2ca4-4a18-9605-8d2a05ca106a"
+      },
+      "RevisionNo" : {
+        "type" : "string",
+        "uid" : "47777a31-e1ec-4898-896e-c4e41037451e"
+      }
+    }
+  },
+  "buildHeader" : {
+    "$schema" : "http://json-schema.org/draft-07/schema#",
+    "type" : "object",
+    "title" : "MROServiceInfoBlock",
+    "properties" : {
+      "MaintRequestNo" : {
+        "type" : "string",
+        "uid" : "d2793f00-bd59-4584-a461-8ca37d00b442"
+      },
+      "BusinessPartner" : {
+        "type" : "string",
+        "uid" : "e2c54304-e693-4e20-a398-7f885deafc1a"
+      },
+      "BusinessPartnerName" : {
+        "type" : "string",
+        "uid" : "ac8e5227-2ca4-4a18-9605-8d2a05ca106a"
+      },
+      "RevisionNo" : {
+        "type" : "string",
+        "uid" : "47777a31-e1ec-4898-896e-c4e41037451e"
+      }
+    }
+  },
+  "validity" : true,
+  "access" : "default",
+  "exportRelease" : "2203.01",
+  "lastHeaderUpdateRelease" : "2202.04",
+  "submittable" : true,
+  "mode" : "managed"
+}

@@ -1,0 +1,212 @@
+{
+  "uid" : "6ad88e1e-3213-4537-b97e-70b63e454947",
+  "name" : "Task Details - Excel - 1",
+  "identifier" : "taskDetailsExcel1",
+  "type" : "datatype",
+  "visibility" : true,
+  "activated" : true,
+  "header" : {
+    "$schema" : "http://json-schema.org/draft-07/schema#",
+    "type" : "object",
+    "title" : "Task Details - Excel - 1",
+    "properties" : {
+      "BuisnessPartner" : {
+        "type" : "string",
+        "uid" : "797f7cc7-5129-4ea0-9a05-d947151c035f"
+      },
+      "BuisnessPartnerName" : {
+        "type" : "string",
+        "uid" : "d6816be2-1b53-4501-a643-93e8fa95c570"
+      },
+      "RevisionNo" : {
+        "type" : "string",
+        "uid" : "fe82fa53-e176-4505-ba68-ca76abd398b6"
+      },
+      "WorkOrder" : {
+        "type" : "string",
+        "uid" : "e35f9201-b025-4544-8186-2c3d64bcbfc4"
+      },
+      "AircraftTailNo" : {
+        "type" : "string",
+        "uid" : "ec670c02-18b8-4d2f-b1ac-7d606c7584a1"
+      },
+      "Regno" : {
+        "type" : "string",
+        "uid" : "8449f0fc-001b-4a87-96a0-fbb087288dc6"
+      },
+      "ModelName" : {
+        "type" : "string",
+        "uid" : "8dce3b29-614c-4dfe-8457-f6a7d7cee23d"
+      },
+      "DATEIN" : {
+        "type" : "string",
+        "uid" : "86ba1854-305a-499b-9935-adb373ce08b7"
+      },
+      "DATEOUT" : {
+        "type" : "string",
+        "uid" : "72b00e06-1abd-4f1f-86ad-e3aec7234ccc"
+      },
+      "ServiceCenter" : {
+        "type" : "string",
+        "uid" : "b50c955d-0c6d-424d-aa6d-d53b73a09a82"
+      },
+      "ReferenceNo" : {
+        "type" : "string",
+        "uid" : "87711ced-ca89-40ba-9dc1-0a70d88fefe3"
+      },
+      "MRNo" : {
+        "type" : "string",
+        "uid" : "c019a577-51a1-491f-8295-59111230e01a"
+      },
+      "FunctionalLocation" : {
+        "type" : "string",
+        "uid" : "8dab4eb9-5292-4bd5-bb5d-3ff881e62ea7"
+      },
+      "Equipment" : {
+        "type" : "string",
+        "uid" : "3bd452bd-3d86-4baa-b43e-98a5f24f02aa"
+      },
+      "PlaningPlant" : {
+        "type" : "string",
+        "uid" : "bdb8fcb4-55e2-45a7-969d-489815eafdad"
+      },
+      "validMr" : {
+        "type" : "boolean",
+        "uid" : "0afce704-0b67-4297-87b9-3d21f01086b2"
+      },
+      "workCenter" : {
+        "type" : "string",
+        "uid" : "c404c3fe-4547-428f-a27c-9981f839a197"
+      },
+      "mrReqType" : {
+        "type" : "string",
+        "uid" : "1c979de1-9c8f-48fb-ae22-c259c4d72eac"
+      },
+      "matirialNo" : {
+        "type" : "string",
+        "uid" : "04994cbb-0f8f-449b-818e-237084964e85"
+      },
+      "ActionStatusBOT1" : {
+        "type" : "boolean",
+        "uid" : "56b96731-1e43-4e91-a228-dc179981f841"
+      },
+      "ActionStatusBOT2" : {
+        "type" : "boolean",
+        "uid" : "f2573e3a-9c65-4cab-81a5-e8bdaaa174a5"
+      },
+      "ActionStatusBOT3" : {
+        "type" : "boolean",
+        "uid" : "9ef0e1bb-20ea-43a9-9007-7c48a445babd"
+      },
+      "ActionStatusBOT4" : {
+        "type" : "boolean",
+        "uid" : "746836a6-100a-4b9b-81e1-1ad9182a6216"
+      }
+    }
+  },
+  "buildHeader" : {
+    "$schema" : "http://json-schema.org/draft-07/schema#",
+    "type" : "object",
+    "title" : "Task Details - Excel - 1",
+    "properties" : {
+      "BuisnessPartner" : {
+        "type" : "string",
+        "uid" : "797f7cc7-5129-4ea0-9a05-d947151c035f"
+      },
+      "BuisnessPartnerName" : {
+        "type" : "string",
+        "uid" : "d6816be2-1b53-4501-a643-93e8fa95c570"
+      },
+      "RevisionNo" : {
+        "type" : "string",
+        "uid" : "fe82fa53-e176-4505-ba68-ca76abd398b6"
+      },
+      "WorkOrder" : {
+        "type" : "string",
+        "uid" : "e35f9201-b025-4544-8186-2c3d64bcbfc4"
+      },
+      "AircraftTailNo" : {
+        "type" : "string",
+        "uid" : "ec670c02-18b8-4d2f-b1ac-7d606c7584a1"
+      },
+      "Regno" : {
+        "type" : "string",
+        "uid" : "8449f0fc-001b-4a87-96a0-fbb087288dc6"
+      },
+      "ModelName" : {
+        "type" : "string",
+        "uid" : "8dce3b29-614c-4dfe-8457-f6a7d7cee23d"
+      },
+      "DATEIN" : {
+        "type" : "string",
+        "uid" : "86ba1854-305a-499b-9935-adb373ce08b7"
+      },
+      "DATEOUT" : {
+        "type" : "string",
+        "uid" : "72b00e06-1abd-4f1f-86ad-e3aec7234ccc"
+      },
+      "ServiceCenter" : {
+        "type" : "string",
+        "uid" : "b50c955d-0c6d-424d-aa6d-d53b73a09a82"
+      },
+      "ReferenceNo" : {
+        "type" : "string",
+        "uid" : "87711ced-ca89-40ba-9dc1-0a70d88fefe3"
+      },
+      "MRNo" : {
+        "type" : "string",
+        "uid" : "c019a577-51a1-491f-8295-59111230e01a"
+      },
+      "FunctionalLocation" : {
+        "type" : "string",
+        "uid" : "8dab4eb9-5292-4bd5-bb5d-3ff881e62ea7"
+      },
+      "Equipment" : {
+        "type" : "string",
+        "uid" : "3bd452bd-3d86-4baa-b43e-98a5f24f02aa"
+      },
+      "PlaningPlant" : {
+        "type" : "string",
+        "uid" : "bdb8fcb4-55e2-45a7-969d-489815eafdad"
+      },
+      "validMr" : {
+        "type" : "boolean",
+        "uid" : "0afce704-0b67-4297-87b9-3d21f01086b2"
+      },
+      "workCenter" : {
+        "type" : "string",
+        "uid" : "c404c3fe-4547-428f-a27c-9981f839a197"
+      },
+      "mrReqType" : {
+        "type" : "string",
+        "uid" : "1c979de1-9c8f-48fb-ae22-c259c4d72eac"
+      },
+      "matirialNo" : {
+        "type" : "string",
+        "uid" : "04994cbb-0f8f-449b-818e-237084964e85"
+      },
+      "ActionStatusBOT1" : {
+        "type" : "boolean",
+        "uid" : "56b96731-1e43-4e91-a228-dc179981f841"
+      },
+      "ActionStatusBOT2" : {
+        "type" : "boolean",
+        "uid" : "f2573e3a-9c65-4cab-81a5-e8bdaaa174a5"
+      },
+      "ActionStatusBOT3" : {
+        "type" : "boolean",
+        "uid" : "9ef0e1bb-20ea-43a9-9007-7c48a445babd"
+      },
+      "ActionStatusBOT4" : {
+        "type" : "boolean",
+        "uid" : "746836a6-100a-4b9b-81e1-1ad9182a6216"
+      }
+    }
+  },
+  "validity" : true,
+  "access" : "default",
+  "exportRelease" : "2203.01",
+  "lastHeaderUpdateRelease" : "2202.04",
+  "submittable" : true,
+  "mode" : "managed"
+}

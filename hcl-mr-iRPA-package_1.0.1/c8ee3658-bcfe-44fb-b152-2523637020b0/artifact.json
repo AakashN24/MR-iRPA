@@ -1,0 +1,146 @@
+{
+  "uid" : "c8ee3658-bcfe-44fb-b152-2523637020b0",
+  "name" : "hcl-mr-sendEmail-bot0",
+  "identifier" : "hclmrsendEmailbot0",
+  "type" : "automation",
+  "visibility" : true,
+  "activated" : true,
+  "header" : {
+    "inputs" : [ {
+      "description" : "",
+      "identifier" : "TO",
+      "type" : "simple",
+      "typeName" : "string",
+      "typeValue" : "string",
+      "dimension" : 0,
+      "container" : null
+    }, {
+      "description" : "",
+      "identifier" : "Attachment",
+      "type" : "simple",
+      "typeName" : "string",
+      "typeValue" : "string",
+      "dimension" : 0,
+      "container" : null
+    } ],
+    "outputs" : [ ],
+    "maxDuration" : 600,
+    "maxActivityDuration" : 30,
+    "triggerable" : true,
+    "hasAddJobSubAutomations" : false,
+    "hasAlerts" : false,
+    "scriptUids" : [ "33f51840-4d7e-4a8c-b8f1-de1bcb5437d9", "25d56074-20cb-4fca-a713-ccfe4eb7a18d", "9acf05d1-4120-4d19-b472-90f6880465ce", "65fc9115-7be2-4107-ae64-aadee0dabcbf", "3bfa661a-2c87-4771-9cb1-aa9ac17ca965" ]
+  },
+  "buildHeader" : {
+    "input" : {
+      "$schema" : "http://json-schema.org/draft-07/schema#",
+      "type" : "object",
+      "properties" : {
+        "Attachment" : {
+          "type" : "string",
+          "description" : ""
+        },
+        "TO" : {
+          "type" : "string",
+          "description" : ""
+        }
+      }
+    },
+    "output" : {
+      "$schema" : "http://json-schema.org/draft-07/schema#",
+      "type" : "object",
+      "properties" : { }
+    },
+    "internalUid" : null,
+    "triggerable" : true,
+    "maxDuration" : 600,
+    "maxActivityDuration" : 30
+  },
+  "validity" : true,
+  "dependencies" : [ {
+    "artifactUid" : "257a399a-06dc-3ef3-9581-6d5374ab818e",
+    "artifactContainerUid" : "acead2d5-1351-495f-9d6d-9b49aba227eb",
+    "packageUid" : "2dbcfd22-58ea-49a2-99d6-005f5bb902c3",
+    "packageAlias" : "irpa_core"
+  }, {
+    "artifactUid" : "2cd73515-255d-30dc-a2c1-129dfdcbe319",
+    "artifactContainerUid" : "acead2d5-1351-495f-9d6d-9b49aba227eb",
+    "packageUid" : "2dbcfd22-58ea-49a2-99d6-005f5bb902c3",
+    "packageAlias" : "irpa_core"
+  }, {
+    "artifactUid" : "3d71a912-e5ca-3cab-9e96-cc170b200ba4",
+    "artifactContainerUid" : "ef9e058a-4572-4697-a135-437259619475",
+    "packageUid" : "e5dadd38-93e2-423a-8126-69aecb04b92b",
+    "packageAlias" : "irpa_outlook"
+  }, {
+    "artifactUid" : "532ff9d9-9040-3db8-ae61-fadb6b1983ae",
+    "artifactContainerUid" : "ef9e058a-4572-4697-a135-437259619475",
+    "packageUid" : "e5dadd38-93e2-423a-8126-69aecb04b92b",
+    "packageAlias" : "irpa_outlook"
+  }, {
+    "artifactUid" : "72ac3c04-38a6-3298-92bb-fe2ef0a27750",
+    "artifactContainerUid" : "ef9e058a-4572-4697-a135-437259619475",
+    "packageUid" : "e5dadd38-93e2-423a-8126-69aecb04b92b",
+    "packageAlias" : "irpa_outlook"
+  }, {
+    "artifactUid" : "9cab8902-34c3-37f9-a6bb-8e55279e5195",
+    "artifactContainerUid" : "acead2d5-1351-495f-9d6d-9b49aba227eb",
+    "packageUid" : "2dbcfd22-58ea-49a2-99d6-005f5bb902c3",
+    "packageAlias" : "irpa_core"
+  }, {
+    "artifactUid" : "aab5ad95-d8dd-3ea2-b24d-17c88b53b37c",
+    "artifactContainerUid" : "acead2d5-1351-495f-9d6d-9b49aba227eb",
+    "packageUid" : "2dbcfd22-58ea-49a2-99d6-005f5bb902c3",
+    "packageAlias" : "irpa_core"
+  }, {
+    "artifactUid" : "ea369a14-f794-44a8-b43a-47b073529ba9",
+    "artifactContainerUid" : "5ed9a5b8-dc37-42fb-9a61-b5ce49e5895a"
+  }, {
+    "artifactUid" : "ed521d70-d2b5-3286-848b-8acd783a6b43",
+    "artifactContainerUid" : "acead2d5-1351-495f-9d6d-9b49aba227eb",
+    "packageUid" : "2dbcfd22-58ea-49a2-99d6-005f5bb902c3",
+    "packageAlias" : "irpa_core"
+  } ],
+  "access" : "default",
+  "contents" : [ {
+    "uid" : "1c1a4613-4fb0-4698-8a44-3cc4ee3a20fa",
+    "name" : "25d56074-20cb-4fca-a713-ccfe4eb7a18d",
+    "mimeType" : "application/json",
+    "size" : 318,
+    "lastUpdateRelease" : "2203.00"
+  }, {
+    "uid" : "7bc64f72-f533-4ae6-a005-dd07b449d2ce",
+    "name" : "33f51840-4d7e-4a8c-b8f1-de1bcb5437d9",
+    "mimeType" : "application/json",
+    "size" : 853,
+    "lastUpdateRelease" : "2203.00"
+  }, {
+    "uid" : "f10d3f1d-ce05-43fc-8636-8d0a438d9ed9",
+    "name" : "3bfa661a-2c87-4771-9cb1-aa9ac17ca965",
+    "mimeType" : "application/json",
+    "size" : 621,
+    "lastUpdateRelease" : "2203.00"
+  }, {
+    "uid" : "534916ea-6030-4339-97f3-d81063e4cc8d",
+    "name" : "65fc9115-7be2-4107-ae64-aadee0dabcbf",
+    "mimeType" : "application/json",
+    "size" : 660,
+    "lastUpdateRelease" : "2203.00"
+  }, {
+    "uid" : "5e8c0d0c-270e-40d3-82f4-f3ae28721b8f",
+    "name" : "9acf05d1-4120-4d19-b472-90f6880465ce",
+    "mimeType" : "application/json",
+    "size" : 616,
+    "lastUpdateRelease" : "2203.00"
+  }, {
+    "uid" : "d2816a57-5649-495e-827a-7735747f0186",
+    "name" : "content",
+    "mimeType" : "application/json",
+    "size" : 48184,
+    "lastUpdateRelease" : "2203.00"
+  } ],
+  "exportRelease" : "2203.01",
+  "lastHeaderUpdateRelease" : "2203.00",
+  "submittable" : true,
+  "mode" : "managed"
+}

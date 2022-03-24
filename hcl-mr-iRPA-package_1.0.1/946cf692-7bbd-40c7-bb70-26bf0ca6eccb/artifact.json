@@ -1,0 +1,44 @@
+{
+  "uid" : "946cf692-7bbd-40c7-bb70-26bf0ca6eccb",
+  "name" : "Index",
+  "identifier" : "index",
+  "type" : "datatype",
+  "visibility" : true,
+  "activated" : true,
+  "header" : {
+    "$schema" : "http://json-schema.org/draft-07/schema#",
+    "type" : "object",
+    "title" : "Index",
+    "properties" : {
+      "Created" : {
+        "type" : "string",
+        "uid" : "228a78fb-b876-4d5b-8d26-5c7c746836aa"
+      },
+      "error" : {
+        "type" : "string",
+        "uid" : "29d92a67-9720-40bd-b43c-a284bb2b4cb8"
+      }
+    }
+  },
+  "buildHeader" : {
+    "$schema" : "http://json-schema.org/draft-07/schema#",
+    "type" : "object",
+    "title" : "Index",
+    "properties" : {
+      "Created" : {
+        "type" : "string",
+        "uid" : "228a78fb-b876-4d5b-8d26-5c7c746836aa"
+      },
+      "error" : {
+        "type" : "string",
+        "uid" : "29d92a67-9720-40bd-b43c-a284bb2b4cb8"
+      }
+    }
+  },
+  "validity" : true,
+  "access" : "default",
+  "exportRelease" : "2203.01",
+  "lastHeaderUpdateRelease" : "2202.04",
+  "submittable" : true,
+  "mode" : "managed"
+}

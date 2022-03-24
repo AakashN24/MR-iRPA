@@ -1,0 +1,28 @@
+{
+  "nodes" : [ {
+    "type" : "AUTOMATION_TRIGGER",
+    "label" : "Start hcl-mr-sendEmail-bot0",
+    "automationUid" : "c8ee3658-bcfe-44fb-b152-2523637020b0",
+    "containerId" : null
+  }, {
+    "type" : "AUTOMATION_TRIGGER",
+    "label" : "Start hcl-mr- readEmail-bot1",
+    "automationUid" : "3a383d65-8f18-47ae-b9dd-8e8ed465346b",
+    "containerId" : null
+  }, {
+    "type" : "AUTOMATION_TRIGGER",
+    "label" : "Start hcl-mr-validate-bot2",
+    "automationUid" : "7ee9d036-7cbb-4826-9e21-7317abb9a01b",
+    "containerId" : null
+  }, {
+    "type" : "AUTOMATION_TRIGGER",
+    "label" : "Start hcl-mr-createWorkItems-bot3",
+    "automationUid" : "0fc138a4-95e2-4aaf-af58-371aefe3c7a4",
+    "containerId" : null
+  }, {
+    "type" : "AUTOMATION_TRIGGER",
+    "label" : "Start hcl-mr-createNotifications-bot4",
+    "automationUid" : "e4e1da29-1cd0-4a33-a69f-0decf92d6c89",
+    "containerId" : null
+  } ]
+}

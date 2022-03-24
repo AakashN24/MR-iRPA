@@ -1,0 +1,60 @@
+{
+  "uid" : "72f51c6b-7e32-4c08-b863-46dc89556eac",
+  "name" : "CustomerInfoBlock",
+  "identifier" : "customerInfoBlock",
+  "type" : "datatype",
+  "visibility" : true,
+  "activated" : true,
+  "header" : {
+    "$schema" : "http://json-schema.org/draft-07/schema#",
+    "type" : "object",
+    "title" : "CustomerInfoBlock",
+    "properties" : {
+      "AircraftTailNo" : {
+        "type" : "string",
+        "uid" : "c70ccb53-3293-46e1-8015-3d13e18c13e6"
+      },
+      "WorkOrderNo" : {
+        "type" : "string",
+        "uid" : "d8fd1be3-5b24-4c8a-8f03-6d266adafaa2"
+      },
+      "ModelName" : {
+        "type" : "string",
+        "uid" : "6ed98681-d798-4115-82b8-05feb0ceda33"
+      },
+      "ReferenceNo" : {
+        "type" : "string",
+        "uid" : "96ecda96-ebae-454f-b29d-d44afc3c1513"
+      }
+    }
+  },
+  "buildHeader" : {
+    "$schema" : "http://json-schema.org/draft-07/schema#",
+    "type" : "object",
+    "title" : "CustomerInfoBlock",
+    "properties" : {
+      "AircraftTailNo" : {
+        "type" : "string",
+        "uid" : "c70ccb53-3293-46e1-8015-3d13e18c13e6"
+      },
+      "WorkOrderNo" : {
+        "type" : "string",
+        "uid" : "d8fd1be3-5b24-4c8a-8f03-6d266adafaa2"
+      },
+      "ModelName" : {
+        "type" : "string",
+        "uid" : "6ed98681-d798-4115-82b8-05feb0ceda33"
+      },
+      "ReferenceNo" : {
+        "type" : "string",
+        "uid" : "96ecda96-ebae-454f-b29d-d44afc3c1513"
+      }
+    }
+  },
+  "validity" : true,
+  "access" : "default",
+  "exportRelease" : "2203.01",
+  "lastHeaderUpdateRelease" : "2202.04",
+  "submittable" : true,
+  "mode" : "managed"
+}

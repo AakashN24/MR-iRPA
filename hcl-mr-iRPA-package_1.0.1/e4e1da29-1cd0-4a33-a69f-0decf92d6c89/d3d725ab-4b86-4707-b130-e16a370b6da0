@@ -1,0 +1,2121 @@
+{
+  "do" : [ {
+    "id" : "0",
+    "name" : "Start",
+    "active" : true,
+    "metadata" : null,
+    "annotation" : null,
+    "type" : "start"
+  }, {
+    "id" : "26",
+    "name" : "Get File Collection",
+    "active" : true,
+    "metadata" : null,
+    "annotation" : null,
+    "outputMapping" : {
+      "coll" : "coll"
+    },
+    "inputMapping" : {
+      "type" : "positional",
+      "arguments" : [ {
+        "type" : "expression",
+        "context" : {
+          "b799fd8e-dce3-4fc9-819e-22bbd40b8826" : {
+            "origin" : "parent"
+          }
+        },
+        "value" : {
+          "type" : "Program",
+          "start" : 0,
+          "end" : 10,
+          "body" : [ {
+            "type" : "ExpressionStatement",
+            "start" : 0,
+            "end" : 10,
+            "expression" : {
+              "type" : "Identifier",
+              "start" : 0,
+              "end" : 10,
+              "optional" : false,
+              "refUid" : 0,
+              "name" : "path",
+              "contextUid" : "b799fd8e-dce3-4fc9-819e-22bbd40b8826"
+            }
+          } ],
+          "sourceType" : "script"
+        },
+        "name" : "folderPath"
+      }, {
+        "type" : "expression",
+        "context" : { },
+        "value" : {
+          "type" : "Program",
+          "start" : 0,
+          "end" : 9,
+          "body" : [ {
+            "type" : "ExpressionStatement",
+            "start" : 0,
+            "end" : 9,
+            "expression" : {
+              "type" : "Identifier",
+              "start" : 0,
+              "end" : 9,
+              "name" : "undefined"
+            }
+          } ],
+          "sourceType" : "script"
+        },
+        "name" : "full"
+      } ]
+    },
+    "type" : "call",
+    "activity" : {
+      "module" : {
+        "containerId" : "irpa_core",
+        "id" : "fs",
+        "uid" : "08932019-52df-3d41-8347-421faed14de4"
+      },
+      "className" : null,
+      "activityId" : "folder.getFileCollection"
+    },
+    "inputsAreReadOnly" : false
+  }, {
+    "id" : "12",
+    "name" : "Create string variable",
+    "active" : true,
+    "metadata" : null,
+    "annotation" : null,
+    "outputMapping" : {
+      "myVariableList" : "createationStatus"
+    },
+    "inputMapping" : {
+      "type" : "positional",
+      "arguments" : [ {
+        "type" : "expression",
+        "value" : {
+          "type" : "Program",
+          "start" : 0,
+          "end" : 8,
+          "body" : [ {
+            "type" : "ExpressionStatement",
+            "start" : 0,
+            "end" : 8,
+            "expression" : {
+              "type" : "Literal",
+              "start" : 0,
+              "end" : 8,
+              "value" : "string",
+              "raw" : "\"string\""
+            },
+            "directive" : "string"
+          } ],
+          "sourceType" : "script"
+        },
+        "name" : "type"
+      }, {
+        "type" : "expression",
+        "context" : { },
+        "value" : {
+          "type" : "Program",
+          "start" : 0,
+          "end" : 9,
+          "body" : [ {
+            "type" : "ExpressionStatement",
+            "start" : 0,
+            "end" : 9,
+            "expression" : {
+              "type" : "Identifier",
+              "start" : 0,
+              "end" : 9,
+              "name" : "undefined"
+            }
+          } ],
+          "sourceType" : "script"
+        },
+        "name" : "value"
+      } ]
+    },
+    "type" : "call",
+    "activity" : {
+      "module" : {
+        "containerId" : "irpa_core",
+        "id" : "variable",
+        "uid" : "ed521d70-d2b5-3286-848b-8acd783a6b43"
+      },
+      "className" : null,
+      "activityId" : "createList"
+    }
+  }, {
+    "id" : "13",
+    "name" : "For Each - files",
+    "active" : true,
+    "metadata" : null,
+    "annotation" : null,
+    "do" : [ {
+      "id" : "14",
+      "name" : "Open Excel Instance",
+      "active" : true,
+      "metadata" : null,
+      "annotation" : null,
+      "inputMapping" : {
+        "type" : "positional",
+        "arguments" : [ {
+          "type" : "expression",
+          "value" : {
+            "type" : "Program",
+            "start" : 0,
+            "end" : 4,
+            "body" : [ {
+              "type" : "ExpressionStatement",
+              "start" : 0,
+              "end" : 4,
+              "expression" : {
+                "type" : "Literal",
+                "start" : 0,
+                "end" : 4,
+                "value" : true,
+                "raw" : "true"
+              }
+            } ],
+            "sourceType" : "script"
+          },
+          "name" : "visible"
+        }, {
+          "type" : "expression",
+          "value" : {
+            "type" : "Program",
+            "start" : 0,
+            "end" : 5,
+            "body" : [ {
+              "type" : "ExpressionStatement",
+              "start" : 0,
+              "end" : 5,
+              "expression" : {
+                "type" : "Literal",
+                "start" : 0,
+                "end" : 5,
+                "value" : false,
+                "raw" : "false"
+              }
+            } ],
+            "sourceType" : "script"
+          },
+          "name" : "displayAlerts"
+        } ]
+      },
+      "type" : "call",
+      "activity" : {
+        "module" : {
+          "containerId" : "irpa_excel",
+          "id" : "application",
+          "uid" : "ad8424e5-0004-31e8-b7c2-cd871847e3e3"
+        },
+        "className" : null,
+        "activityId" : "newExcelInstance"
+      },
+      "inputsAreReadOnly" : false
+    }, {
+      "id" : "15",
+      "name" : "Open Workbook",
+      "active" : true,
+      "metadata" : null,
+      "annotation" : null,
+      "inputMapping" : {
+        "type" : "positional",
+        "arguments" : [ {
+          "type" : "expression",
+          "context" : {
+            "624b8f79-7e76-4bb2-9d85-d9d252bb4c4a" : {
+              "origin" : "parent"
+            },
+            "61881da0-09a0-4335-bb5d-e5da31977514" : {
+              "origin" : "statement",
+              "ref" : "13"
+            }
+          },
+          "value" : {
+            "type" : "Program",
+            "start" : 0,
+            "end" : 32,
+            "body" : [ {
+              "type" : "ExpressionStatement",
+              "start" : 0,
+              "end" : 32,
+              "expression" : {
+                "type" : "BinaryExpression",
+                "start" : 0,
+                "end" : 32,
+                "left" : {
+                  "type" : "Identifier",
+                  "start" : 0,
+                  "end" : 10,
+                  "optional" : false,
+                  "refUid" : 0,
+                  "name" : "path",
+                  "contextUid" : "624b8f79-7e76-4bb2-9d85-d9d252bb4c4a"
+                },
+                "operator" : "+",
+                "right" : {
+                  "type" : "Identifier",
+                  "start" : 0,
+                  "end" : 32,
+                  "optional" : false,
+                  "refUid" : 13,
+                  "name" : "currentMember",
+                  "contextUid" : "61881da0-09a0-4335-bb5d-e5da31977514"
+                }
+              }
+            } ],
+            "sourceType" : "script"
+          },
+          "name" : "workbookPath"
+        } ]
+      },
+      "type" : "call",
+      "activity" : {
+        "module" : {
+          "containerId" : "irpa_excel",
+          "id" : "workbook",
+          "uid" : "9d97d190-ddae-3b68-bf21-ac94e6bc05e4"
+        },
+        "className" : null,
+        "activityId" : "openExistingWorkbook"
+      },
+      "inputsAreReadOnly" : false
+    }, {
+      "id" : "16",
+      "name" : "Get Value - MrNo",
+      "active" : true,
+      "metadata" : null,
+      "annotation" : null,
+      "outputMapping" : {
+        "returnedValues" : "returnedValues"
+      },
+      "inputMapping" : {
+        "type" : "positional",
+        "arguments" : [ {
+          "type" : "expression",
+          "value" : {
+            "type" : "Program",
+            "start" : 0,
+            "end" : 7,
+            "body" : [ {
+              "type" : "ExpressionStatement",
+              "start" : 0,
+              "end" : 7,
+              "expression" : {
+                "type" : "Literal",
+                "start" : 0,
+                "end" : 7,
+                "value" : "B9:B9",
+                "raw" : "\"B9:B9\""
+              },
+              "directive" : "B9:B9"
+            } ],
+            "sourceType" : "script"
+          },
+          "name" : "rangeDefinition"
+        }, {
+          "type" : "expression",
+          "context" : { },
+          "value" : {
+            "type" : "Program",
+            "start" : 0,
+            "end" : 9,
+            "body" : [ {
+              "type" : "ExpressionStatement",
+              "start" : 0,
+              "end" : 9,
+              "expression" : {
+                "type" : "Identifier",
+                "start" : 0,
+                "end" : 9,
+                "name" : "undefined"
+              }
+            } ],
+            "sourceType" : "script"
+          },
+          "name" : "defaultValue"
+        }, {
+          "type" : "expression",
+          "context" : {
+            "b5727cf5-7437-4ae1-a8da-5070f6d8dcf9" : {
+              "origin" : "package",
+              "containerId" : "irpa_excel",
+              "ref" : "079265fd-0cc3-37ff-9896-ef34682a481b"
+            }
+          },
+          "value" : {
+            "type" : "Program",
+            "start" : 0,
+            "end" : 35,
+            "body" : [ {
+              "type" : "ExpressionStatement",
+              "start" : 0,
+              "end" : 35,
+              "expression" : {
+                "type" : "MemberExpression",
+                "start" : 0,
+                "end" : 35,
+                "object" : {
+                  "type" : "MemberExpression",
+                  "start" : 0,
+                  "end" : 26,
+                  "object" : {
+                    "type" : "Identifier",
+                    "start" : 0,
+                    "end" : 16,
+                    "optional" : false,
+                    "refUid" : "irpa_excel.079265fd-0cc3-37ff-9896-ef34682a481b",
+                    "name" : "enums",
+                    "contextUid" : "b5727cf5-7437-4ae1-a8da-5070f6d8dcf9"
+                  },
+                  "property" : {
+                    "type" : "Identifier",
+                    "start" : 17,
+                    "end" : 26,
+                    "name" : "getFormat"
+                  },
+                  "computed" : false,
+                  "optional" : false
+                },
+                "property" : {
+                  "type" : "Identifier",
+                  "start" : 27,
+                  "end" : 35,
+                  "name" : "standard"
+                },
+                "computed" : false,
+                "optional" : false
+              }
+            } ],
+            "sourceType" : "script"
+          },
+          "name" : "getFormat"
+        }, {
+          "type" : "expression",
+          "value" : {
+            "type" : "Program",
+            "start" : 0,
+            "end" : 5,
+            "body" : [ {
+              "type" : "ExpressionStatement",
+              "start" : 0,
+              "end" : 5,
+              "expression" : {
+                "type" : "Literal",
+                "start" : 0,
+                "end" : 5,
+                "value" : false,
+                "raw" : "false"
+              }
+            } ],
+            "sourceType" : "script"
+          },
+          "name" : "visibleOnly"
+        } ]
+      },
+      "type" : "call",
+      "activity" : {
+        "module" : {
+          "containerId" : "irpa_excel",
+          "id" : "worksheet",
+          "uid" : "b2b39969-be3a-32e5-b4cb-3ebfacb6d3e5"
+        },
+        "className" : null,
+        "activityId" : "getValues"
+      },
+      "inputsAreReadOnly" : false
+    }, {
+      "id" : "27",
+      "name" : "Custom script - get ID",
+      "active" : true,
+      "metadata" : null,
+      "annotation" : null,
+      "outputMapping" : {
+        "response1" : "response1"
+      },
+      "inputMapping" : {
+        "type" : "positional",
+        "arguments" : [ {
+          "type" : "expression",
+          "context" : {
+            "feea3194-0a52-4512-ab5b-179d882f943b" : {
+              "origin" : "statement",
+              "ref" : "16"
+            }
+          },
+          "value" : {
+            "type" : "Program",
+            "start" : 0,
+            "end" : 20,
+            "body" : [ {
+              "type" : "ExpressionStatement",
+              "start" : 0,
+              "end" : 20,
+              "expression" : {
+                "type" : "Identifier",
+                "start" : 0,
+                "end" : 20,
+                "optional" : false,
+                "refUid" : 16,
+                "name" : "returnedValues",
+                "contextUid" : "feea3194-0a52-4512-ab5b-179d882f943b"
+              }
+            } ],
+            "sourceType" : "script"
+          },
+          "name" : "MrNo"
+        } ]
+      },
+      "type" : "script",
+      "header" : {
+        "inputs" : [ {
+          "description" : "",
+          "identifier" : "MrNo",
+          "type" : "simple",
+          "typeName" : "string",
+          "typeValue" : "string",
+          "dimension" : 0,
+          "container" : null
+        } ],
+        "outputs" : [ {
+          "description" : "",
+          "identifier" : "response1",
+          "type" : "simple",
+          "typeName" : "any",
+          "typeValue" : "any",
+          "dimension" : 0,
+          "container" : null
+        } ]
+      },
+      "contentUid" : "a4be455f-9d4a-4d93-b2d0-fb736481bb97"
+    }, {
+      "id" : "18",
+      "name" : "Get Values -ActionStatusBOT1",
+      "active" : true,
+      "metadata" : null,
+      "annotation" : null,
+      "outputMapping" : {
+        "returnedValues" : "returnedValues"
+      },
+      "inputMapping" : {
+        "type" : "positional",
+        "arguments" : [ {
+          "type" : "expression",
+          "value" : {
+            "type" : "Program",
+            "start" : 0,
+            "end" : 9,
+            "body" : [ {
+              "type" : "ExpressionStatement",
+              "start" : 0,
+              "end" : 9,
+              "expression" : {
+                "type" : "Literal",
+                "start" : 0,
+                "end" : 9,
+                "value" : "B20:B20",
+                "raw" : "\"B20:B20\""
+              },
+              "directive" : "B20:B20"
+            } ],
+            "sourceType" : "script"
+          },
+          "name" : "rangeDefinition"
+        }, {
+          "type" : "expression",
+          "context" : { },
+          "value" : {
+            "type" : "Program",
+            "start" : 0,
+            "end" : 9,
+            "body" : [ {
+              "type" : "ExpressionStatement",
+              "start" : 0,
+              "end" : 9,
+              "expression" : {
+                "type" : "Identifier",
+                "start" : 0,
+                "end" : 9,
+                "name" : "undefined"
+              }
+            } ],
+            "sourceType" : "script"
+          },
+          "name" : "defaultValue"
+        }, {
+          "type" : "expression",
+          "context" : {
+            "069b0658-9b7c-45a3-a543-6bffae9a1a00" : {
+              "origin" : "package",
+              "containerId" : "irpa_excel",
+              "ref" : "079265fd-0cc3-37ff-9896-ef34682a481b"
+            }
+          },
+          "value" : {
+            "type" : "Program",
+            "start" : 0,
+            "end" : 35,
+            "body" : [ {
+              "type" : "ExpressionStatement",
+              "start" : 0,
+              "end" : 35,
+              "expression" : {
+                "type" : "MemberExpression",
+                "start" : 0,
+                "end" : 35,
+                "object" : {
+                  "type" : "MemberExpression",
+                  "start" : 0,
+                  "end" : 26,
+                  "object" : {
+                    "type" : "Identifier",
+                    "start" : 0,
+                    "end" : 16,
+                    "optional" : false,
+                    "refUid" : "irpa_excel.079265fd-0cc3-37ff-9896-ef34682a481b",
+                    "name" : "enums",
+                    "contextUid" : "069b0658-9b7c-45a3-a543-6bffae9a1a00"
+                  },
+                  "property" : {
+                    "type" : "Identifier",
+                    "start" : 17,
+                    "end" : 26,
+                    "name" : "getFormat"
+                  },
+                  "computed" : false,
+                  "optional" : false
+                },
+                "property" : {
+                  "type" : "Identifier",
+                  "start" : 27,
+                  "end" : 35,
+                  "name" : "standard"
+                },
+                "computed" : false,
+                "optional" : false
+              }
+            } ],
+            "sourceType" : "script"
+          },
+          "name" : "getFormat"
+        }, {
+          "type" : "expression",
+          "value" : {
+            "type" : "Program",
+            "start" : 0,
+            "end" : 5,
+            "body" : [ {
+              "type" : "ExpressionStatement",
+              "start" : 0,
+              "end" : 5,
+              "expression" : {
+                "type" : "Literal",
+                "start" : 0,
+                "end" : 5,
+                "value" : false,
+                "raw" : "false"
+              }
+            } ],
+            "sourceType" : "script"
+          },
+          "name" : "visibleOnly"
+        } ]
+      },
+      "type" : "call",
+      "activity" : {
+        "module" : {
+          "containerId" : "irpa_excel",
+          "id" : "worksheet",
+          "uid" : "b2b39969-be3a-32e5-b4cb-3ebfacb6d3e5"
+        },
+        "className" : null,
+        "activityId" : "getValues"
+      },
+      "inputsAreReadOnly" : false
+    }, {
+      "id" : "19",
+      "name" : "Get Value-ActionStatusBOT2",
+      "active" : true,
+      "metadata" : null,
+      "annotation" : null,
+      "outputMapping" : {
+        "returnedValues" : "returnedValues"
+      },
+      "inputMapping" : {
+        "type" : "positional",
+        "arguments" : [ {
+          "type" : "expression",
+          "value" : {
+            "type" : "Program",
+            "start" : 0,
+            "end" : 9,
+            "body" : [ {
+              "type" : "ExpressionStatement",
+              "start" : 0,
+              "end" : 9,
+              "expression" : {
+                "type" : "Literal",
+                "start" : 0,
+                "end" : 9,
+                "value" : "B21:B21",
+                "raw" : "\"B21:B21\""
+              },
+              "directive" : "B21:B21"
+            } ],
+            "sourceType" : "script"
+          },
+          "name" : "rangeDefinition"
+        }, {
+          "type" : "expression",
+          "context" : { },
+          "value" : {
+            "type" : "Program",
+            "start" : 0,
+            "end" : 9,
+            "body" : [ {
+              "type" : "ExpressionStatement",
+              "start" : 0,
+              "end" : 9,
+              "expression" : {
+                "type" : "Identifier",
+                "start" : 0,
+                "end" : 9,
+                "name" : "undefined"
+              }
+            } ],
+            "sourceType" : "script"
+          },
+          "name" : "defaultValue"
+        }, {
+          "type" : "expression",
+          "context" : {
+            "5ff7cc81-0ecd-4c47-9533-d38f44ca0405" : {
+              "origin" : "package",
+              "containerId" : "irpa_excel",
+              "ref" : "079265fd-0cc3-37ff-9896-ef34682a481b"
+            }
+          },
+          "value" : {
+            "type" : "Program",
+            "start" : 0,
+            "end" : 35,
+            "body" : [ {
+              "type" : "ExpressionStatement",
+              "start" : 0,
+              "end" : 35,
+              "expression" : {
+                "type" : "MemberExpression",
+                "start" : 0,
+                "end" : 35,
+                "object" : {
+                  "type" : "MemberExpression",
+                  "start" : 0,
+                  "end" : 26,
+                  "object" : {
+                    "type" : "Identifier",
+                    "start" : 0,
+                    "end" : 16,
+                    "optional" : false,
+                    "refUid" : "irpa_excel.079265fd-0cc3-37ff-9896-ef34682a481b",
+                    "name" : "enums",
+                    "contextUid" : "5ff7cc81-0ecd-4c47-9533-d38f44ca0405"
+                  },
+                  "property" : {
+                    "type" : "Identifier",
+                    "start" : 17,
+                    "end" : 26,
+                    "name" : "getFormat"
+                  },
+                  "computed" : false,
+                  "optional" : false
+                },
+                "property" : {
+                  "type" : "Identifier",
+                  "start" : 27,
+                  "end" : 35,
+                  "name" : "standard"
+                },
+                "computed" : false,
+                "optional" : false
+              }
+            } ],
+            "sourceType" : "script"
+          },
+          "name" : "getFormat"
+        }, {
+          "type" : "expression",
+          "value" : {
+            "type" : "Program",
+            "start" : 0,
+            "end" : 5,
+            "body" : [ {
+              "type" : "ExpressionStatement",
+              "start" : 0,
+              "end" : 5,
+              "expression" : {
+                "type" : "Literal",
+                "start" : 0,
+                "end" : 5,
+                "value" : false,
+                "raw" : "false"
+              }
+            } ],
+            "sourceType" : "script"
+          },
+          "name" : "visibleOnly"
+        } ]
+      },
+      "type" : "call",
+      "activity" : {
+        "module" : {
+          "containerId" : "irpa_excel",
+          "id" : "worksheet",
+          "uid" : "b2b39969-be3a-32e5-b4cb-3ebfacb6d3e5"
+        },
+        "className" : null,
+        "activityId" : "getValues"
+      },
+      "inputsAreReadOnly" : false
+    }, {
+      "id" : "20",
+      "name" : "Get Value - ActionStatusBOT3",
+      "active" : true,
+      "metadata" : null,
+      "annotation" : null,
+      "outputMapping" : {
+        "returnedValues" : "returnedValues"
+      },
+      "inputMapping" : {
+        "type" : "positional",
+        "arguments" : [ {
+          "type" : "expression",
+          "value" : {
+            "type" : "Program",
+            "start" : 0,
+            "end" : 9,
+            "body" : [ {
+              "type" : "ExpressionStatement",
+              "start" : 0,
+              "end" : 9,
+              "expression" : {
+                "type" : "Literal",
+                "start" : 0,
+                "end" : 9,
+                "value" : "B22:B22",
+                "raw" : "\"B22:B22\""
+              },
+              "directive" : "B22:B22"
+            } ],
+            "sourceType" : "script"
+          },
+          "name" : "rangeDefinition"
+        }, {
+          "type" : "expression",
+          "context" : { },
+          "value" : {
+            "type" : "Program",
+            "start" : 0,
+            "end" : 9,
+            "body" : [ {
+              "type" : "ExpressionStatement",
+              "start" : 0,
+              "end" : 9,
+              "expression" : {
+                "type" : "Identifier",
+                "start" : 0,
+                "end" : 9,
+                "name" : "undefined"
+              }
+            } ],
+            "sourceType" : "script"
+          },
+          "name" : "defaultValue"
+        }, {
+          "type" : "expression",
+          "context" : {
+            "7c5b6ceb-ff84-4d7c-b9fe-8c45d337aa19" : {
+              "origin" : "package",
+              "containerId" : "irpa_excel",
+              "ref" : "079265fd-0cc3-37ff-9896-ef34682a481b"
+            }
+          },
+          "value" : {
+            "type" : "Program",
+            "start" : 0,
+            "end" : 35,
+            "body" : [ {
+              "type" : "ExpressionStatement",
+              "start" : 0,
+              "end" : 35,
+              "expression" : {
+                "type" : "MemberExpression",
+                "start" : 0,
+                "end" : 35,
+                "object" : {
+                  "type" : "MemberExpression",
+                  "start" : 0,
+                  "end" : 26,
+                  "object" : {
+                    "type" : "Identifier",
+                    "start" : 0,
+                    "end" : 16,
+                    "optional" : false,
+                    "refUid" : "irpa_excel.079265fd-0cc3-37ff-9896-ef34682a481b",
+                    "name" : "enums",
+                    "contextUid" : "7c5b6ceb-ff84-4d7c-b9fe-8c45d337aa19"
+                  },
+                  "property" : {
+                    "type" : "Identifier",
+                    "start" : 17,
+                    "end" : 26,
+                    "name" : "getFormat"
+                  },
+                  "computed" : false,
+                  "optional" : false
+                },
+                "property" : {
+                  "type" : "Identifier",
+                  "start" : 27,
+                  "end" : 35,
+                  "name" : "standard"
+                },
+                "computed" : false,
+                "optional" : false
+              }
+            } ],
+            "sourceType" : "script"
+          },
+          "name" : "getFormat"
+        }, {
+          "type" : "expression",
+          "value" : {
+            "type" : "Program",
+            "start" : 0,
+            "end" : 5,
+            "body" : [ {
+              "type" : "ExpressionStatement",
+              "start" : 0,
+              "end" : 5,
+              "expression" : {
+                "type" : "Literal",
+                "start" : 0,
+                "end" : 5,
+                "value" : false,
+                "raw" : "false"
+              }
+            } ],
+            "sourceType" : "script"
+          },
+          "name" : "visibleOnly"
+        } ]
+      },
+      "type" : "call",
+      "activity" : {
+        "module" : {
+          "containerId" : "irpa_excel",
+          "id" : "worksheet",
+          "uid" : "b2b39969-be3a-32e5-b4cb-3ebfacb6d3e5"
+        },
+        "className" : null,
+        "activityId" : "getValues"
+      },
+      "inputsAreReadOnly" : false
+    }, {
+      "id" : "21",
+      "name" : "Condition-bot1,2,3",
+      "active" : true,
+      "metadata" : null,
+      "annotation" : null,
+      "type" : "exclusive-gateway",
+      "caseType" : "condition",
+      "cases" : [ {
+        "do" : [ {
+          "id" : "4",
+          "name" : "Custom script - get records",
+          "active" : true,
+          "metadata" : null,
+          "annotation" : null,
+          "outputMapping" : {
+            "responce1" : "responce1"
+          },
+          "inputMapping" : {
+            "type" : "positional",
+            "arguments" : [ {
+              "type" : "expression",
+              "context" : {
+                "6ceed581-095c-4888-95fc-6c81d7d7a73b" : {
+                  "origin" : "statement",
+                  "ref" : "16"
+                }
+              },
+              "value" : {
+                "type" : "Program",
+                "start" : 0,
+                "end" : 31,
+                "body" : [ {
+                  "type" : "ExpressionStatement",
+                  "start" : 0,
+                  "end" : 31,
+                  "expression" : {
+                    "type" : "CallExpression",
+                    "start" : 0,
+                    "end" : 31,
+                    "callee" : {
+                      "type" : "MemberExpression",
+                      "start" : 0,
+                      "end" : 29,
+                      "object" : {
+                        "type" : "Identifier",
+                        "start" : 0,
+                        "end" : 20,
+                        "optional" : false,
+                        "refUid" : 16,
+                        "name" : "returnedValues",
+                        "contextUid" : "6ceed581-095c-4888-95fc-6c81d7d7a73b"
+                      },
+                      "property" : {
+                        "type" : "Identifier",
+                        "start" : 21,
+                        "end" : 29,
+                        "name" : "toString"
+                      },
+                      "computed" : false,
+                      "optional" : false
+                    },
+                    "arguments" : [ ],
+                    "optional" : false
+                  }
+                } ],
+                "sourceType" : "script"
+              },
+              "name" : "mrNo"
+            } ]
+          },
+          "type" : "script",
+          "header" : {
+            "inputs" : [ {
+              "description" : "",
+              "identifier" : "mrNo",
+              "type" : "simple",
+              "typeName" : "number",
+              "typeValue" : "number",
+              "dimension" : 0,
+              "container" : null
+            } ],
+            "outputs" : [ {
+              "description" : "",
+              "identifier" : "responce1",
+              "type" : "simple",
+              "typeName" : "any",
+              "typeValue" : "any",
+              "dimension" : 0,
+              "container" : null
+            } ]
+          },
+          "contentUid" : "d533b143-fa0b-4489-bd30-7c13eff4ec5a"
+        }, {
+          "id" : "11",
+          "name" : "Condition",
+          "active" : true,
+          "metadata" : null,
+          "annotation" : null,
+          "type" : "exclusive-gateway",
+          "caseType" : "condition",
+          "cases" : [ {
+            "do" : [ {
+              "id" : "6",
+              "name" : "For Each - createNotif",
+              "active" : true,
+              "metadata" : null,
+              "annotation" : null,
+              "do" : [ {
+                "id" : "8",
+                "name" : "Try",
+                "active" : true,
+                "metadata" : null,
+                "annotation" : null,
+                "type" : "try",
+                "do" : [ {
+                  "id" : "10",
+                  "name" : "Custom script - Index",
+                  "active" : true,
+                  "metadata" : null,
+                  "annotation" : null,
+                  "outputMapping" : {
+                    "ID" : "ID"
+                  },
+                  "inputMapping" : {
+                    "type" : "positional",
+                    "arguments" : [ {
+                      "type" : "expression",
+                      "context" : {
+                        "70109e07-3b3f-4af1-9d87-163ce41e6b49" : {
+                          "origin" : "statement",
+                          "ref" : "4"
+                        }
+                      },
+                      "value" : {
+                        "type" : "Program",
+                        "start" : 0,
+                        "end" : 16,
+                        "body" : [ {
+                          "type" : "ExpressionStatement",
+                          "start" : 0,
+                          "end" : 16,
+                          "expression" : {
+                            "type" : "Identifier",
+                            "start" : 0,
+                            "end" : 16,
+                            "optional" : false,
+                            "refUid" : 4,
+                            "name" : "responce1",
+                            "contextUid" : "70109e07-3b3f-4af1-9d87-163ce41e6b49"
+                          }
+                        } ],
+                        "sourceType" : "script"
+                      },
+                      "name" : "response1"
+                    }, {
+                      "type" : "expression",
+                      "context" : {
+                        "8692f81f-8fca-4b88-8036-146c890f0dee" : {
+                          "origin" : "statement",
+                          "ref" : "6"
+                        }
+                      },
+                      "value" : {
+                        "type" : "Program",
+                        "start" : 0,
+                        "end" : 12,
+                        "body" : [ {
+                          "type" : "ExpressionStatement",
+                          "start" : 0,
+                          "end" : 12,
+                          "expression" : {
+                            "type" : "Identifier",
+                            "start" : 0,
+                            "end" : 12,
+                            "optional" : false,
+                            "refUid" : 6,
+                            "name" : "index",
+                            "contextUid" : "8692f81f-8fca-4b88-8036-146c890f0dee"
+                          }
+                        } ],
+                        "sourceType" : "script"
+                      },
+                      "name" : "index"
+                    } ]
+                  },
+                  "type" : "script",
+                  "header" : {
+                    "inputs" : [ {
+                      "description" : "",
+                      "identifier" : "response1",
+                      "type" : "simple",
+                      "typeName" : "any",
+                      "typeValue" : "any",
+                      "dimension" : 0,
+                      "container" : null
+                    }, {
+                      "description" : "",
+                      "identifier" : "index",
+                      "type" : "simple",
+                      "typeName" : "number",
+                      "typeValue" : "number",
+                      "dimension" : 0,
+                      "container" : null
+                    } ],
+                    "outputs" : [ {
+                      "description" : "",
+                      "identifier" : "ID",
+                      "type" : "simple",
+                      "typeName" : "string",
+                      "typeValue" : "string",
+                      "dimension" : 0,
+                      "container" : null
+                    } ]
+                  },
+                  "contentUid" : "707c386d-4b48-486a-bb37-f71c7e36e5ce"
+                }, {
+                  "id" : "7",
+                  "name" : "Custom script - createNotification",
+                  "active" : true,
+                  "metadata" : null,
+                  "annotation" : null,
+                  "outputMapping" : {
+                    "response2" : "response2"
+                  },
+                  "inputMapping" : {
+                    "type" : "positional",
+                    "arguments" : [ {
+                      "type" : "expression",
+                      "context" : {
+                        "1bae069c-d917-4b19-9b66-cf607e4be0ba" : {
+                          "origin" : "statement",
+                          "ref" : "4"
+                        }
+                      },
+                      "value" : {
+                        "type" : "Program",
+                        "start" : 0,
+                        "end" : 16,
+                        "body" : [ {
+                          "type" : "ExpressionStatement",
+                          "start" : 0,
+                          "end" : 16,
+                          "expression" : {
+                            "type" : "Identifier",
+                            "start" : 0,
+                            "end" : 16,
+                            "optional" : false,
+                            "refUid" : 4,
+                            "name" : "responce1",
+                            "contextUid" : "1bae069c-d917-4b19-9b66-cf607e4be0ba"
+                          }
+                        } ],
+                        "sourceType" : "script"
+                      },
+                      "name" : "response1"
+                    }, {
+                      "type" : "expression",
+                      "context" : {
+                        "4acbcf1c-f103-4a6b-8a9e-31658d9886ee" : {
+                          "origin" : "statement",
+                          "ref" : "10"
+                        }
+                      },
+                      "value" : {
+                        "type" : "Program",
+                        "start" : 0,
+                        "end" : 9,
+                        "body" : [ {
+                          "type" : "ExpressionStatement",
+                          "start" : 0,
+                          "end" : 9,
+                          "expression" : {
+                            "type" : "Identifier",
+                            "start" : 0,
+                            "end" : 9,
+                            "optional" : false,
+                            "refUid" : 10,
+                            "name" : "ID",
+                            "contextUid" : "4acbcf1c-f103-4a6b-8a9e-31658d9886ee"
+                          }
+                        } ],
+                        "sourceType" : "script"
+                      },
+                      "name" : "ID"
+                    }, {
+                      "type" : "expression",
+                      "context" : {
+                        "e438b772-4423-4bdd-9007-666719f7d3d2" : {
+                          "origin" : "statement",
+                          "ref" : "12"
+                        }
+                      },
+                      "value" : {
+                        "type" : "Program",
+                        "start" : 0,
+                        "end" : 23,
+                        "body" : [ {
+                          "type" : "ExpressionStatement",
+                          "start" : 0,
+                          "end" : 23,
+                          "expression" : {
+                            "type" : "Identifier",
+                            "start" : 0,
+                            "end" : 23,
+                            "optional" : false,
+                            "refUid" : 12,
+                            "name" : "createationStatus",
+                            "contextUid" : "e438b772-4423-4bdd-9007-666719f7d3d2"
+                          }
+                        } ],
+                        "sourceType" : "script"
+                      },
+                      "name" : "result"
+                    }, {
+                      "type" : "expression",
+                      "context" : {
+                        "b6e1ec86-0d16-48ee-be04-9d1ca6bd7885" : {
+                          "origin" : "statement",
+                          "ref" : "6"
+                        }
+                      },
+                      "value" : {
+                        "type" : "Program",
+                        "start" : 0,
+                        "end" : 12,
+                        "body" : [ {
+                          "type" : "ExpressionStatement",
+                          "start" : 0,
+                          "end" : 12,
+                          "expression" : {
+                            "type" : "Identifier",
+                            "start" : 0,
+                            "end" : 12,
+                            "optional" : false,
+                            "refUid" : 6,
+                            "name" : "index",
+                            "contextUid" : "b6e1ec86-0d16-48ee-be04-9d1ca6bd7885"
+                          }
+                        } ],
+                        "sourceType" : "script"
+                      },
+                      "name" : "index"
+                    } ]
+                  },
+                  "type" : "script",
+                  "header" : {
+                    "inputs" : [ {
+                      "description" : "",
+                      "identifier" : "response1",
+                      "type" : "simple",
+                      "typeName" : "any",
+                      "typeValue" : "any",
+                      "dimension" : 0,
+                      "container" : null
+                    }, {
+                      "description" : "",
+                      "identifier" : "ID",
+                      "type" : "simple",
+                      "typeName" : "string",
+                      "typeValue" : "string",
+                      "dimension" : 0,
+                      "container" : null
+                    }, {
+                      "description" : "",
+                      "identifier" : "result",
+                      "type" : "simple",
+                      "typeName" : "string",
+                      "typeValue" : "string",
+                      "dimension" : 1,
+                      "container" : null
+                    }, {
+                      "description" : "",
+                      "identifier" : "index",
+                      "type" : "simple",
+                      "typeName" : "number",
+                      "typeValue" : "number",
+                      "dimension" : 0,
+                      "container" : null
+                    } ],
+                    "outputs" : [ {
+                      "description" : "",
+                      "identifier" : "response2",
+                      "type" : "simple",
+                      "typeName" : "any",
+                      "typeValue" : "any",
+                      "dimension" : 0,
+                      "container" : null
+                    } ]
+                  },
+                  "contentUid" : "3060ba9f-0117-4b69-9e17-37b334f87ef9"
+                }, {
+                  "id" : "9",
+                  "name" : "Log Message - created",
+                  "active" : true,
+                  "metadata" : null,
+                  "annotation" : null,
+                  "inputMapping" : {
+                    "type" : "positional",
+                    "arguments" : [ {
+                      "type" : "expression",
+                      "value" : {
+                        "type" : "Program",
+                        "start" : 0,
+                        "end" : 9,
+                        "body" : [ {
+                          "type" : "ExpressionStatement",
+                          "start" : 0,
+                          "end" : 9,
+                          "expression" : {
+                            "type" : "Literal",
+                            "start" : 0,
+                            "end" : 9,
+                            "value" : "Created",
+                            "raw" : "\"Created\""
+                          },
+                          "directive" : "Created"
+                        } ],
+                        "sourceType" : "script"
+                      },
+                      "name" : "message"
+                    }, {
+                      "type" : "expression",
+                      "context" : { },
+                      "value" : {
+                        "type" : "Program",
+                        "start" : 0,
+                        "end" : 9,
+                        "body" : [ {
+                          "type" : "ExpressionStatement",
+                          "start" : 0,
+                          "end" : 9,
+                          "expression" : {
+                            "type" : "Identifier",
+                            "start" : 0,
+                            "end" : 9,
+                            "name" : "undefined"
+                          }
+                        } ],
+                        "sourceType" : "script"
+                      },
+                      "name" : "type"
+                    }, {
+                      "type" : "expression",
+                      "context" : { },
+                      "value" : {
+                        "type" : "Program",
+                        "start" : 0,
+                        "end" : 9,
+                        "body" : [ {
+                          "type" : "ExpressionStatement",
+                          "start" : 0,
+                          "end" : 9,
+                          "expression" : {
+                            "type" : "Identifier",
+                            "start" : 0,
+                            "end" : 9,
+                            "name" : "undefined"
+                          }
+                        } ],
+                        "sourceType" : "script"
+                      },
+                      "name" : "label"
+                    } ]
+                  },
+                  "type" : "call",
+                  "activity" : {
+                    "module" : {
+                      "containerId" : "irpa_core",
+                      "id" : "core",
+                      "uid" : "aab5ad95-d8dd-3ea2-b24d-17c88b53b37c"
+                    },
+                    "className" : null,
+                    "activityId" : "log"
+                  },
+                  "inputsAreReadOnly" : false
+                }, {
+                  "id" : "17",
+                  "name" : "Set Value- ActionStatusBOT4",
+                  "active" : true,
+                  "metadata" : null,
+                  "annotation" : null,
+                  "inputMapping" : {
+                    "type" : "positional",
+                    "arguments" : [ {
+                      "type" : "expression",
+                      "value" : {
+                        "type" : "Program",
+                        "start" : 0,
+                        "end" : 9,
+                        "body" : [ {
+                          "type" : "ExpressionStatement",
+                          "start" : 0,
+                          "end" : 9,
+                          "expression" : {
+                            "type" : "Literal",
+                            "start" : 0,
+                            "end" : 9,
+                            "value" : "B23:B23",
+                            "raw" : "\"B23:B23\""
+                          },
+                          "directive" : "B23:B23"
+                        } ],
+                        "sourceType" : "script"
+                      },
+                      "name" : "rangeDefinition"
+                    }, {
+                      "type" : "expression",
+                      "value" : {
+                        "type" : "Program",
+                        "start" : 0,
+                        "end" : 4,
+                        "body" : [ {
+                          "type" : "ExpressionStatement",
+                          "start" : 0,
+                          "end" : 4,
+                          "expression" : {
+                            "type" : "Literal",
+                            "start" : 0,
+                            "end" : 4,
+                            "value" : true,
+                            "raw" : "true"
+                          }
+                        } ],
+                        "sourceType" : "script"
+                      },
+                      "name" : "values"
+                    }, {
+                      "type" : "expression",
+                      "context" : {
+                        "30a4e461-a159-4319-9b71-d7e90cc57e71" : {
+                          "origin" : "package",
+                          "containerId" : "irpa_excel",
+                          "ref" : "079265fd-0cc3-37ff-9896-ef34682a481b"
+                        }
+                      },
+                      "value" : {
+                        "type" : "Program",
+                        "start" : 0,
+                        "end" : 39,
+                        "body" : [ {
+                          "type" : "ExpressionStatement",
+                          "start" : 0,
+                          "end" : 39,
+                          "expression" : {
+                            "type" : "MemberExpression",
+                            "start" : 0,
+                            "end" : 39,
+                            "object" : {
+                              "type" : "MemberExpression",
+                              "start" : 0,
+                              "end" : 30,
+                              "object" : {
+                                "type" : "Identifier",
+                                "start" : 0,
+                                "end" : 16,
+                                "optional" : false,
+                                "refUid" : "irpa_excel.079265fd-0cc3-37ff-9896-ef34682a481b",
+                                "name" : "enums",
+                                "contextUid" : "30a4e461-a159-4319-9b71-d7e90cc57e71"
+                              },
+                              "property" : {
+                                "type" : "Identifier",
+                                "start" : 17,
+                                "end" : 30,
+                                "name" : "listDirection"
+                              },
+                              "computed" : false,
+                              "optional" : false
+                            },
+                            "property" : {
+                              "type" : "Identifier",
+                              "start" : 31,
+                              "end" : 39,
+                              "name" : "vertical"
+                            },
+                            "computed" : false,
+                            "optional" : false
+                          }
+                        } ],
+                        "sourceType" : "script"
+                      },
+                      "name" : "listDirection"
+                    } ]
+                  },
+                  "type" : "call",
+                  "activity" : {
+                    "module" : {
+                      "containerId" : "irpa_excel",
+                      "id" : "worksheet",
+                      "uid" : "b2b39969-be3a-32e5-b4cb-3ebfacb6d3e5"
+                    },
+                    "className" : null,
+                    "activityId" : "setValues"
+                  },
+                  "inputsAreReadOnly" : false
+                } ],
+                "errorVariable" : "error",
+                "outputMapping" : { },
+                "catches" : [ {
+                  "do" : [ ],
+                  "outputMapping" : { },
+                  "error" : {
+                    "module" : {
+                      "containerId" : "irpa_core",
+                      "id" : "error",
+                      "uid" : "9cab8902-34c3-37f9-a6bb-8e55279e5195"
+                    },
+                    "errorId" : "RequestError"
+                  }
+                } ],
+                "outputs" : [ ]
+              } ],
+              "outputMapping" : { },
+              "indexVariable" : "index",
+              "outputs" : [ ],
+              "type" : "for-each",
+              "items" : {
+                "type" : "expression",
+                "context" : {
+                  "0a9483d0-1c2e-4514-8650-ec1a31317cf3" : {
+                    "origin" : "statement",
+                    "ref" : "4"
+                  }
+                },
+                "value" : {
+                  "type" : "Program",
+                  "start" : 0,
+                  "end" : 22,
+                  "body" : [ {
+                    "type" : "ExpressionStatement",
+                    "start" : 0,
+                    "end" : 22,
+                    "expression" : {
+                      "type" : "MemberExpression",
+                      "start" : 0,
+                      "end" : 22,
+                      "object" : {
+                        "type" : "Identifier",
+                        "start" : 0,
+                        "end" : 16,
+                        "optional" : false,
+                        "refUid" : 4,
+                        "name" : "responce1",
+                        "contextUid" : "0a9483d0-1c2e-4514-8650-ec1a31317cf3"
+                      },
+                      "property" : {
+                        "type" : "Identifier",
+                        "start" : 17,
+                        "end" : 22,
+                        "name" : "value"
+                      },
+                      "computed" : false,
+                      "optional" : false
+                    }
+                  } ],
+                  "sourceType" : "script"
+                }
+              },
+              "itemVariable" : "currentMember"
+            } ],
+            "outputMapping" : { },
+            "case" : {
+              "type" : "expression",
+              "value" : {
+                "type" : "Program",
+                "start" : 0,
+                "end" : 34,
+                "body" : [ {
+                  "type" : "ExpressionStatement",
+                  "start" : 0,
+                  "end" : 34,
+                  "expression" : {
+                    "type" : "BinaryExpression",
+                    "start" : 0,
+                    "end" : 34,
+                    "left" : {
+                      "type" : "MemberExpression",
+                      "start" : 0,
+                      "end" : 29,
+                      "object" : {
+                        "type" : "MemberExpression",
+                        "start" : 0,
+                        "end" : 22,
+                        "object" : {
+                          "type" : "Identifier",
+                          "start" : 0,
+                          "end" : 16,
+                          "optional" : false,
+                          "refUid" : 4,
+                          "name" : "responce1",
+                          "contextUid" : "08575e58-e54c-421b-b4f9-d4b4e31c9f2b"
+                        },
+                        "property" : {
+                          "type" : "Identifier",
+                          "start" : 17,
+                          "end" : 22,
+                          "name" : "value"
+                        },
+                        "computed" : false,
+                        "optional" : false
+                      },
+                      "property" : {
+                        "type" : "Identifier",
+                        "start" : 23,
+                        "end" : 29,
+                        "name" : "length"
+                      },
+                      "computed" : false,
+                      "optional" : false
+                    },
+                    "operator" : "!=",
+                    "right" : {
+                      "type" : "Literal",
+                      "start" : 33,
+                      "end" : 34,
+                      "value" : 0,
+                      "raw" : "0"
+                    }
+                  }
+                } ],
+                "sourceType" : "script"
+              },
+              "context" : {
+                "08575e58-e54c-421b-b4f9-d4b4e31c9f2b" : {
+                  "origin" : "statement",
+                  "ref" : "4"
+                }
+              }
+            }
+          }, {
+            "do" : [ ],
+            "outputMapping" : { },
+            "case" : {
+              "type" : "default"
+            }
+          } ],
+          "outputs" : [ ]
+        } ],
+        "outputMapping" : { },
+        "case" : {
+          "type" : "expression",
+          "value" : {
+            "type" : "Program",
+            "start" : 0,
+            "end" : 93,
+            "body" : [ {
+              "type" : "ExpressionStatement",
+              "start" : 0,
+              "end" : 93,
+              "expression" : {
+                "type" : "LogicalExpression",
+                "start" : 0,
+                "end" : 93,
+                "left" : {
+                  "type" : "LogicalExpression",
+                  "start" : 0,
+                  "end" : 60,
+                  "left" : {
+                    "type" : "BinaryExpression",
+                    "start" : 0,
+                    "end" : 28,
+                    "left" : {
+                      "type" : "Identifier",
+                      "start" : 0,
+                      "end" : 20,
+                      "optional" : false,
+                      "refUid" : 18,
+                      "name" : "returnedValues",
+                      "contextUid" : "252e0c26-57e9-4488-9f19-9fd05ff86be4"
+                    },
+                    "operator" : "==",
+                    "right" : {
+                      "type" : "Literal",
+                      "start" : 24,
+                      "end" : 28,
+                      "value" : true,
+                      "raw" : "true"
+                    }
+                  },
+                  "operator" : "&&",
+                  "right" : {
+                    "type" : "BinaryExpression",
+                    "start" : 32,
+                    "end" : 60,
+                    "left" : {
+                      "type" : "Identifier",
+                      "start" : 0,
+                      "end" : 52,
+                      "optional" : false,
+                      "refUid" : 19,
+                      "name" : "returnedValues",
+                      "contextUid" : "c536e80d-5fb2-4170-99f6-8dc3473b9ff6"
+                    },
+                    "operator" : "==",
+                    "right" : {
+                      "type" : "Literal",
+                      "start" : 56,
+                      "end" : 60,
+                      "value" : true,
+                      "raw" : "true"
+                    }
+                  }
+                },
+                "operator" : "&&",
+                "right" : {
+                  "type" : "BinaryExpression",
+                  "start" : 64,
+                  "end" : 93,
+                  "left" : {
+                    "type" : "Identifier",
+                    "start" : 0,
+                    "end" : 85,
+                    "optional" : false,
+                    "refUid" : 20,
+                    "name" : "returnedValues",
+                    "contextUid" : "d0df2a84-0dde-44a0-83e1-c6bbfe96a4bb"
+                  },
+                  "operator" : "==",
+                  "right" : {
+                    "type" : "Literal",
+                    "start" : 89,
+                    "end" : 93,
+                    "value" : true,
+                    "raw" : "true"
+                  }
+                }
+              }
+            } ],
+            "sourceType" : "script"
+          },
+          "context" : {
+            "252e0c26-57e9-4488-9f19-9fd05ff86be4" : {
+              "origin" : "statement",
+              "ref" : "18"
+            },
+            "c536e80d-5fb2-4170-99f6-8dc3473b9ff6" : {
+              "origin" : "statement",
+              "ref" : "19"
+            },
+            "d0df2a84-0dde-44a0-83e1-c6bbfe96a4bb" : {
+              "origin" : "statement",
+              "ref" : "20"
+            }
+          }
+        }
+      }, {
+        "do" : [ ],
+        "outputMapping" : { },
+        "case" : {
+          "type" : "default"
+        }
+      } ],
+      "outputs" : [ ]
+    }, {
+      "id" : "22",
+      "name" : "Save Workbook",
+      "active" : true,
+      "metadata" : null,
+      "annotation" : null,
+      "type" : "call",
+      "activity" : {
+        "module" : {
+          "containerId" : "irpa_excel",
+          "id" : "workbook",
+          "uid" : "9d97d190-ddae-3b68-bf21-ac94e6bc05e4"
+        },
+        "className" : null,
+        "activityId" : "save"
+      },
+      "inputsAreReadOnly" : false
+    }, {
+      "id" : "23",
+      "name" : "Close Workbook",
+      "active" : true,
+      "metadata" : null,
+      "annotation" : null,
+      "inputMapping" : {
+        "type" : "positional",
+        "arguments" : [ {
+          "type" : "expression",
+          "value" : {
+            "type" : "Program",
+            "start" : 0,
+            "end" : 5,
+            "body" : [ {
+              "type" : "ExpressionStatement",
+              "start" : 0,
+              "end" : 5,
+              "expression" : {
+                "type" : "Literal",
+                "start" : 0,
+                "end" : 5,
+                "value" : false,
+                "raw" : "false"
+              }
+            } ],
+            "sourceType" : "script"
+          },
+          "name" : "hasToSave"
+        } ]
+      },
+      "type" : "call",
+      "activity" : {
+        "module" : {
+          "containerId" : "irpa_excel",
+          "id" : "workbook",
+          "uid" : "9d97d190-ddae-3b68-bf21-ac94e6bc05e4"
+        },
+        "className" : null,
+        "activityId" : "close"
+      },
+      "inputsAreReadOnly" : false
+    }, {
+      "id" : "24",
+      "name" : "Close Excel Instance",
+      "active" : true,
+      "metadata" : null,
+      "annotation" : null,
+      "type" : "call",
+      "activity" : {
+        "module" : {
+          "containerId" : "irpa_excel",
+          "id" : "application",
+          "uid" : "ad8424e5-0004-31e8-b7c2-cd871847e3e3"
+        },
+        "className" : null,
+        "activityId" : "closeExcel"
+      },
+      "inputsAreReadOnly" : false
+    }, {
+      "id" : "25",
+      "name" : "Release Excel Instance",
+      "active" : true,
+      "metadata" : null,
+      "annotation" : null,
+      "type" : "call",
+      "activity" : {
+        "module" : {
+          "containerId" : "irpa_excel",
+          "id" : "application",
+          "uid" : "ad8424e5-0004-31e8-b7c2-cd871847e3e3"
+        },
+        "className" : null,
+        "activityId" : "release"
+      },
+      "inputsAreReadOnly" : false
+    }, {
+      "id" : "28",
+      "name" : "Custom script -deactiveEntity",
+      "active" : true,
+      "metadata" : null,
+      "annotation" : null,
+      "inputMapping" : {
+        "type" : "positional",
+        "arguments" : [ {
+          "type" : "expression",
+          "context" : {
+            "9a4d20d6-e801-4495-b25a-d0ccf164e0de" : {
+              "origin" : "statement",
+              "ref" : "27"
+            }
+          },
+          "value" : {
+            "type" : "Program",
+            "start" : 0,
+            "end" : 15,
+            "body" : [ {
+              "type" : "ExpressionStatement",
+              "start" : 0,
+              "end" : 15,
+              "expression" : {
+                "type" : "Identifier",
+                "start" : 0,
+                "end" : 15,
+                "optional" : false,
+                "refUid" : 27,
+                "name" : "response1",
+                "contextUid" : "9a4d20d6-e801-4495-b25a-d0ccf164e0de"
+              }
+            } ],
+            "sourceType" : "script"
+          },
+          "name" : "response1"
+        } ]
+      },
+      "type" : "script",
+      "header" : {
+        "inputs" : [ {
+          "description" : "",
+          "identifier" : "response1",
+          "type" : "simple",
+          "typeName" : "any",
+          "typeValue" : "any",
+          "dimension" : 0,
+          "container" : null
+        } ],
+        "outputs" : [ ]
+      },
+      "contentUid" : "43146a37-ca80-405b-a0e9-cdc9b83307b5"
+    }, {
+      "id" : "5",
+      "name" : "Custom script -PATCH",
+      "active" : true,
+      "metadata" : null,
+      "annotation" : null,
+      "inputMapping" : {
+        "type" : "positional",
+        "arguments" : [ {
+          "type" : "expression",
+          "context" : {
+            "a1b7768b-8bdf-4968-af3d-a87473a2f6cd" : {
+              "origin" : "statement",
+              "ref" : "27"
+            }
+          },
+          "value" : {
+            "type" : "Program",
+            "start" : 0,
+            "end" : 15,
+            "body" : [ {
+              "type" : "ExpressionStatement",
+              "start" : 0,
+              "end" : 15,
+              "expression" : {
+                "type" : "Identifier",
+                "start" : 0,
+                "end" : 15,
+                "optional" : false,
+                "refUid" : 27,
+                "name" : "response1",
+                "contextUid" : "a1b7768b-8bdf-4968-af3d-a87473a2f6cd"
+              }
+            } ],
+            "sourceType" : "script"
+          },
+          "name" : "response1"
+        } ]
+      },
+      "type" : "script",
+      "header" : {
+        "inputs" : [ {
+          "description" : "",
+          "identifier" : "response1",
+          "type" : "simple",
+          "typeName" : "any",
+          "typeValue" : "any",
+          "dimension" : 0,
+          "container" : null
+        } ],
+        "outputs" : [ ]
+      },
+      "contentUid" : "b4543480-82a6-4b37-aa1d-d28510b7f56e"
+    }, {
+      "id" : "29",
+      "name" : "Custom script -activateEnity",
+      "active" : true,
+      "metadata" : null,
+      "annotation" : null,
+      "inputMapping" : {
+        "type" : "positional",
+        "arguments" : [ {
+          "type" : "expression",
+          "context" : {
+            "7440742b-6b9c-443e-af5a-ad74ec3eb2d1" : {
+              "origin" : "statement",
+              "ref" : "27"
+            }
+          },
+          "value" : {
+            "type" : "Program",
+            "start" : 0,
+            "end" : 15,
+            "body" : [ {
+              "type" : "ExpressionStatement",
+              "start" : 0,
+              "end" : 15,
+              "expression" : {
+                "type" : "Identifier",
+                "start" : 0,
+                "end" : 15,
+                "optional" : false,
+                "refUid" : 27,
+                "name" : "response1",
+                "contextUid" : "7440742b-6b9c-443e-af5a-ad74ec3eb2d1"
+              }
+            } ],
+            "sourceType" : "script"
+          },
+          "name" : "response1"
+        } ]
+      },
+      "type" : "script",
+      "header" : {
+        "inputs" : [ {
+          "description" : "",
+          "identifier" : "response1",
+          "type" : "simple",
+          "typeName" : "any",
+          "typeValue" : "any",
+          "dimension" : 0,
+          "container" : null
+        } ],
+        "outputs" : [ ]
+      },
+      "contentUid" : "934d7959-6df9-4b46-aa30-c63ad7f4b511"
+    } ],
+    "outputMapping" : { },
+    "indexVariable" : "index",
+    "outputs" : [ ],
+    "type" : "for-each",
+    "items" : {
+      "type" : "expression",
+      "context" : {
+        "88bc578e-898e-4f85-b88e-dda3e3393c6b" : {
+          "origin" : "statement",
+          "ref" : "26"
+        }
+      },
+      "value" : {
+        "type" : "Program",
+        "start" : 0,
+        "end" : 10,
+        "body" : [ {
+          "type" : "ExpressionStatement",
+          "start" : 0,
+          "end" : 10,
+          "expression" : {
+            "type" : "Identifier",
+            "start" : 0,
+            "end" : 10,
+            "optional" : false,
+            "refUid" : 26,
+            "name" : "coll",
+            "contextUid" : "88bc578e-898e-4f85-b88e-dda3e3393c6b"
+          }
+        } ],
+        "sourceType" : "script"
+      }
+    },
+    "itemVariable" : "currentMember"
+  }, {
+    "id" : "1",
+    "name" : "End",
+    "active" : true,
+    "metadata" : null,
+    "annotation" : null,
+    "type" : "end",
+    "outputMapping" : {
+      "CreatedNotifications" : {
+        "type" : "expression",
+        "context" : {
+          "1e0f207f-c947-4b91-9d91-1bbb268036ae" : {
+            "origin" : "statement",
+            "ref" : "12"
+          }
+        },
+        "value" : {
+          "type" : "Program",
+          "start" : 0,
+          "end" : 23,
+          "body" : [ {
+            "type" : "ExpressionStatement",
+            "start" : 0,
+            "end" : 23,
+            "expression" : {
+              "type" : "Identifier",
+              "start" : 0,
+              "end" : 23,
+              "optional" : false,
+              "refUid" : 12,
+              "name" : "createationStatus",
+              "contextUid" : "1e0f207f-c947-4b91-9d91-1bbb268036ae"
+            }
+          } ],
+          "sourceType" : "script"
+        }
+      }
+    }
+  } ],
+  "onError" : [ {
+    "id" : "2",
+    "name" : "On Error",
+    "active" : true,
+    "metadata" : null,
+    "annotation" : null,
+    "type" : "start-on-error",
+    "errorVariable" : "error"
+  }, {
+    "id" : "3",
+    "name" : "IPA_AUTOMATION_EDITOR_STATEMENT_STOP_ON_ERROR_NAME",
+    "active" : true,
+    "metadata" : null,
+    "annotation" : null,
+    "type" : "stop-on-error"
+  } ]
+}

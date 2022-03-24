@@ -1,0 +1,62 @@
+{
+  "uid" : "b7802058-7627-4d1a-bf98-4d3ae72e5005",
+  "name" : "Task Details - Excel - 2",
+  "identifier" : "taskDetailsExcel",
+  "type" : "datatype",
+  "visibility" : true,
+  "activated" : true,
+  "header" : {
+    "$schema" : "http://json-schema.org/draft-07/schema#",
+    "type" : "object",
+    "title" : "Task Details - Excel - 2",
+    "properties" : {
+      "TaskNo" : {
+        "type" : "string",
+        "uid" : "ce30a898-5313-44f0-845d-69774d40c20c"
+      },
+      "SequenceNo" : {
+        "type" : "string",
+        "uid" : "de55f56b-3c84-4685-8f6f-72541e368c55"
+      },
+      "Description" : {
+        "type" : "string",
+        "uid" : "3271c171-83f9-4ac4-baff-ff0950c991f5"
+      },
+      "ESTDueData" : {
+        "type" : "string",
+        "uid" : "83ed20b6-7557-4ce5-91d0-092c35a8a402"
+      }
+    },
+    "required" : [ ]
+  },
+  "buildHeader" : {
+    "$schema" : "http://json-schema.org/draft-07/schema#",
+    "type" : "object",
+    "title" : "Task Details - Excel - 2",
+    "properties" : {
+      "TaskNo" : {
+        "type" : "string",
+        "uid" : "ce30a898-5313-44f0-845d-69774d40c20c"
+      },
+      "SequenceNo" : {
+        "type" : "string",
+        "uid" : "de55f56b-3c84-4685-8f6f-72541e368c55"
+      },
+      "Description" : {
+        "type" : "string",
+        "uid" : "3271c171-83f9-4ac4-baff-ff0950c991f5"
+      },
+      "ESTDueData" : {
+        "type" : "string",
+        "uid" : "83ed20b6-7557-4ce5-91d0-092c35a8a402"
+      }
+    },
+    "required" : [ ]
+  },
+  "validity" : true,
+  "access" : "default",
+  "exportRelease" : "2203.01",
+  "lastHeaderUpdateRelease" : "2202.03",
+  "submittable" : true,
+  "mode" : "managed"
+}

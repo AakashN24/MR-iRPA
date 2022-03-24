@@ -1,0 +1,38 @@
+{
+  "uid" : "16f93ce3-6806-4d76-9603-5dee5ce3048f",
+  "name" : "MR_BOTS",
+  "description" : "A Project Pane to display the Bots of the project.",
+  "identifier" : "projectpane0",
+  "type" : "projectpane",
+  "visibility" : true,
+  "activated" : true,
+  "validity" : true,
+  "dependencies" : [ {
+    "artifactUid" : "0fc138a4-95e2-4aaf-af58-371aefe3c7a4",
+    "artifactContainerUid" : "5ed9a5b8-dc37-42fb-9a61-b5ce49e5895a"
+  }, {
+    "artifactUid" : "3a383d65-8f18-47ae-b9dd-8e8ed465346b",
+    "artifactContainerUid" : "5ed9a5b8-dc37-42fb-9a61-b5ce49e5895a"
+  }, {
+    "artifactUid" : "7ee9d036-7cbb-4826-9e21-7317abb9a01b",
+    "artifactContainerUid" : "5ed9a5b8-dc37-42fb-9a61-b5ce49e5895a"
+  }, {
+    "artifactUid" : "c8ee3658-bcfe-44fb-b152-2523637020b0",
+    "artifactContainerUid" : "5ed9a5b8-dc37-42fb-9a61-b5ce49e5895a"
+  }, {
+    "artifactUid" : "e4e1da29-1cd0-4a33-a69f-0decf92d6c89",
+    "artifactContainerUid" : "5ed9a5b8-dc37-42fb-9a61-b5ce49e5895a"
+  } ],
+  "access" : "default",
+  "contents" : [ {
+    "uid" : "c6bc086d-6e98-422a-ab45-27f83b31786b",
+    "name" : "content",
+    "mimeType" : "application/json",
+    "size" : 904,
+    "lastUpdateRelease" : "2203.01"
+  } ],
+  "exportRelease" : "2203.01",
+  "lastHeaderUpdateRelease" : "2203.00",
+  "submittable" : true,
+  "mode" : "managed"
+}

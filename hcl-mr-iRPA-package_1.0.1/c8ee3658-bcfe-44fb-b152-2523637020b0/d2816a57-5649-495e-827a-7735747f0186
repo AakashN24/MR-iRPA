@@ -1,0 +1,1477 @@
+{
+  "do" : [ {
+    "id" : "0",
+    "name" : "Start",
+    "active" : true,
+    "metadata" : null,
+    "annotation" : null,
+    "type" : "start"
+  }, {
+    "id" : "4",
+    "name" : "Open Outlook Instance",
+    "active" : true,
+    "metadata" : null,
+    "annotation" : null,
+    "type" : "call",
+    "activity" : {
+      "module" : {
+        "containerId" : "irpa_outlook",
+        "id" : "application",
+        "uid" : "3d71a912-e5ca-3cab-9e96-cc170b200ba4"
+      },
+      "className" : null,
+      "activityId" : "openOutlook"
+    },
+    "inputsAreReadOnly" : false
+  }, {
+    "id" : "11",
+    "name" : "Create mailData variable",
+    "active" : true,
+    "metadata" : "{\"dataType\":{\"dataTypeContainer\":{\"projectUid\":\"62eb9d5f-6ac6-4e35-9185-ecb321bfb903\"},\"uid\":\"ea369a14-f794-44a8-b43a-47b073529ba9\",\"name\":\"mailData\"}}",
+    "annotation" : null,
+    "outputMapping" : {
+      "myVariable" : "myVariable"
+    },
+    "inputMapping" : {
+      "type" : "positional",
+      "arguments" : [ {
+        "type" : "artifact",
+        "value" : {
+          "containerId" : "package",
+          "id" : "mailData",
+          "uid" : "ea369a14-f794-44a8-b43a-47b073529ba9",
+          "refName" : "mailData"
+        },
+        "name" : "type"
+      }, {
+        "type" : "expression",
+        "context" : { },
+        "value" : {
+          "type" : "Program",
+          "start" : 0,
+          "end" : 9,
+          "body" : [ {
+            "type" : "ExpressionStatement",
+            "start" : 0,
+            "end" : 9,
+            "expression" : {
+              "type" : "Identifier",
+              "start" : 0,
+              "end" : 9,
+              "name" : "undefined"
+            }
+          } ],
+          "sourceType" : "script"
+        },
+        "name" : "value"
+      } ]
+    },
+    "type" : "call",
+    "activity" : {
+      "module" : {
+        "containerId" : "irpa_core",
+        "id" : "variable",
+        "uid" : "ed521d70-d2b5-3286-848b-8acd783a6b43"
+      },
+      "className" : null,
+      "activityId" : "create"
+    }
+  }, {
+    "id" : "14",
+    "name" : "Try",
+    "active" : true,
+    "metadata" : null,
+    "annotation" : null,
+    "type" : "try",
+    "do" : [ {
+      "id" : "5",
+      "name" : "Custom script -get records",
+      "active" : true,
+      "metadata" : null,
+      "annotation" : null,
+      "outputMapping" : {
+        "response1" : "response1"
+      },
+      "type" : "script",
+      "header" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "description" : "",
+          "identifier" : "response1",
+          "type" : "simple",
+          "typeName" : "any",
+          "typeValue" : "any",
+          "dimension" : 0,
+          "container" : null
+        } ]
+      },
+      "contentUid" : "33f51840-4d7e-4a8c-b8f1-de1bcb5437d9"
+    }, {
+      "id" : "8",
+      "name" : "For Each",
+      "active" : true,
+      "metadata" : null,
+      "annotation" : null,
+      "do" : [ {
+        "id" : "12",
+        "name" : "Set Variable Value",
+        "active" : true,
+        "metadata" : "{\"dataType\":{\"dataTypeContainer\":{\"projectUid\":\"6815ac37-048e-4be0-89a1-747dfda4566e\"},\"uid\":\"ea369a14-f794-44a8-b43a-47b073529ba9\",\"pathFromParentDataType\":null,\"name\":\"mailData\"}}",
+        "annotation" : null,
+        "inputMapping" : {
+          "type" : "positional",
+          "arguments" : [ {
+            "type" : "expression",
+            "context" : {
+              "7d8820f5-4c4a-4641-9fdb-ed41f7c89ac8" : {
+                "origin" : "statement",
+                "ref" : "11"
+              }
+            },
+            "value" : {
+              "type" : "Program",
+              "start" : 0,
+              "end" : 16,
+              "body" : [ {
+                "type" : "ExpressionStatement",
+                "start" : 0,
+                "end" : 16,
+                "expression" : {
+                  "type" : "Identifier",
+                  "start" : 0,
+                  "end" : 16,
+                  "optional" : false,
+                  "refUid" : 11,
+                  "name" : "myVariable",
+                  "contextUid" : "7d8820f5-4c4a-4641-9fdb-ed41f7c89ac8"
+                }
+              } ],
+              "sourceType" : "script"
+            },
+            "name" : "variable"
+          }, {
+            "type" : "data-object",
+            "value" : {
+              "containerId" : "package",
+              "id" : "mailData",
+              "uid" : "ea369a14-f794-44a8-b43a-47b073529ba9",
+              "refName" : "mailData"
+            },
+            "attributes" : {
+              "BuisnessPartner" : {
+                "type" : "expression",
+                "context" : {
+                  "43eb3a91-8f29-4134-9ae4-28b8caaef150" : {
+                    "origin" : "statement",
+                    "ref" : "5"
+                  },
+                  "712ce5a4-c26f-41e6-9bb9-c76aca606e2d" : {
+                    "origin" : "statement",
+                    "ref" : "8"
+                  }
+                },
+                "value" : {
+                  "type" : "Program",
+                  "start" : 0,
+                  "end" : 44,
+                  "body" : [ {
+                    "type" : "ExpressionStatement",
+                    "start" : 0,
+                    "end" : 44,
+                    "expression" : {
+                      "type" : "MemberExpression",
+                      "start" : 0,
+                      "end" : 44,
+                      "object" : {
+                        "type" : "MemberExpression",
+                        "start" : 0,
+                        "end" : 28,
+                        "object" : {
+                          "type" : "Identifier",
+                          "start" : 0,
+                          "end" : 15,
+                          "optional" : false,
+                          "refUid" : 5,
+                          "name" : "response1",
+                          "contextUid" : "43eb3a91-8f29-4134-9ae4-28b8caaef150"
+                        },
+                        "property" : {
+                          "type" : "Identifier",
+                          "start" : 0,
+                          "end" : 27,
+                          "optional" : false,
+                          "refUid" : 8,
+                          "name" : "index",
+                          "contextUid" : "712ce5a4-c26f-41e6-9bb9-c76aca606e2d"
+                        },
+                        "computed" : true,
+                        "optional" : false
+                      },
+                      "property" : {
+                        "type" : "Identifier",
+                        "start" : 29,
+                        "end" : 44,
+                        "name" : "businessPartner"
+                      },
+                      "computed" : false,
+                      "optional" : false
+                    }
+                  } ],
+                  "sourceType" : "script"
+                }
+              },
+              "BuisnessPartnerName" : {
+                "type" : "expression",
+                "context" : {
+                  "0655545a-1360-4921-94e2-fd9338886452" : {
+                    "origin" : "statement",
+                    "ref" : "5"
+                  },
+                  "49514468-7876-4291-b5e9-e82770a3e8a8" : {
+                    "origin" : "statement",
+                    "ref" : "8"
+                  }
+                },
+                "value" : {
+                  "type" : "Program",
+                  "start" : 0,
+                  "end" : 48,
+                  "body" : [ {
+                    "type" : "ExpressionStatement",
+                    "start" : 0,
+                    "end" : 48,
+                    "expression" : {
+                      "type" : "MemberExpression",
+                      "start" : 0,
+                      "end" : 48,
+                      "object" : {
+                        "type" : "MemberExpression",
+                        "start" : 0,
+                        "end" : 28,
+                        "object" : {
+                          "type" : "Identifier",
+                          "start" : 0,
+                          "end" : 15,
+                          "optional" : false,
+                          "refUid" : 5,
+                          "name" : "response1",
+                          "contextUid" : "0655545a-1360-4921-94e2-fd9338886452"
+                        },
+                        "property" : {
+                          "type" : "Identifier",
+                          "start" : 0,
+                          "end" : 27,
+                          "optional" : false,
+                          "refUid" : 8,
+                          "name" : "index",
+                          "contextUid" : "49514468-7876-4291-b5e9-e82770a3e8a8"
+                        },
+                        "computed" : true,
+                        "optional" : false
+                      },
+                      "property" : {
+                        "type" : "Identifier",
+                        "start" : 29,
+                        "end" : 48,
+                        "name" : "businessPartnerName"
+                      },
+                      "computed" : false,
+                      "optional" : false
+                    }
+                  } ],
+                  "sourceType" : "script"
+                }
+              },
+              "mrNo" : {
+                "type" : "expression",
+                "context" : {
+                  "0d7ff6d7-48de-4074-89ca-a90212127904" : {
+                    "origin" : "statement",
+                    "ref" : "5"
+                  },
+                  "269d2fbb-fe98-42ca-936f-8883e278334e" : {
+                    "origin" : "statement",
+                    "ref" : "8"
+                  }
+                },
+                "value" : {
+                  "type" : "Program",
+                  "start" : 0,
+                  "end" : 38,
+                  "body" : [ {
+                    "type" : "ExpressionStatement",
+                    "start" : 0,
+                    "end" : 38,
+                    "expression" : {
+                      "type" : "MemberExpression",
+                      "start" : 0,
+                      "end" : 38,
+                      "object" : {
+                        "type" : "MemberExpression",
+                        "start" : 0,
+                        "end" : 28,
+                        "object" : {
+                          "type" : "Identifier",
+                          "start" : 0,
+                          "end" : 15,
+                          "optional" : false,
+                          "refUid" : 5,
+                          "name" : "response1",
+                          "contextUid" : "0d7ff6d7-48de-4074-89ca-a90212127904"
+                        },
+                        "property" : {
+                          "type" : "Identifier",
+                          "start" : 0,
+                          "end" : 27,
+                          "optional" : false,
+                          "refUid" : 8,
+                          "name" : "index",
+                          "contextUid" : "269d2fbb-fe98-42ca-936f-8883e278334e"
+                        },
+                        "computed" : true,
+                        "optional" : false
+                      },
+                      "property" : {
+                        "type" : "Identifier",
+                        "start" : 29,
+                        "end" : 38,
+                        "name" : "requestNo"
+                      },
+                      "computed" : false,
+                      "optional" : false
+                    }
+                  } ],
+                  "sourceType" : "script"
+                }
+              },
+              "RevisionNumber" : {
+                "type" : "expression",
+                "context" : {
+                  "7b17cca0-abcb-4456-bdef-20b366045478" : {
+                    "origin" : "statement",
+                    "ref" : "5"
+                  },
+                  "bf2139ef-6714-4f2d-b633-f5bf0c52e65c" : {
+                    "origin" : "statement",
+                    "ref" : "8"
+                  }
+                },
+                "value" : {
+                  "type" : "Program",
+                  "start" : 0,
+                  "end" : 39,
+                  "body" : [ {
+                    "type" : "ExpressionStatement",
+                    "start" : 0,
+                    "end" : 39,
+                    "expression" : {
+                      "type" : "MemberExpression",
+                      "start" : 0,
+                      "end" : 39,
+                      "object" : {
+                        "type" : "MemberExpression",
+                        "start" : 0,
+                        "end" : 28,
+                        "object" : {
+                          "type" : "Identifier",
+                          "start" : 0,
+                          "end" : 15,
+                          "optional" : false,
+                          "refUid" : 5,
+                          "name" : "response1",
+                          "contextUid" : "7b17cca0-abcb-4456-bdef-20b366045478"
+                        },
+                        "property" : {
+                          "type" : "Identifier",
+                          "start" : 0,
+                          "end" : 27,
+                          "optional" : false,
+                          "refUid" : 8,
+                          "name" : "index",
+                          "contextUid" : "bf2139ef-6714-4f2d-b633-f5bf0c52e65c"
+                        },
+                        "computed" : true,
+                        "optional" : false
+                      },
+                      "property" : {
+                        "type" : "Identifier",
+                        "start" : 29,
+                        "end" : 39,
+                        "name" : "revisionNo"
+                      },
+                      "computed" : false,
+                      "optional" : false
+                    }
+                  } ],
+                  "sourceType" : "script"
+                }
+              },
+              "ID" : {
+                "type" : "expression",
+                "context" : {
+                  "64e9f799-a2f0-49ec-8be4-65a1709d27ac" : {
+                    "origin" : "statement",
+                    "ref" : "5"
+                  },
+                  "f59a01da-d8d4-4ae9-a40d-43b8ec6cbefd" : {
+                    "origin" : "statement",
+                    "ref" : "8"
+                  }
+                },
+                "value" : {
+                  "type" : "Program",
+                  "start" : 0,
+                  "end" : 31,
+                  "body" : [ {
+                    "type" : "ExpressionStatement",
+                    "start" : 0,
+                    "end" : 31,
+                    "expression" : {
+                      "type" : "MemberExpression",
+                      "start" : 0,
+                      "end" : 31,
+                      "object" : {
+                        "type" : "MemberExpression",
+                        "start" : 0,
+                        "end" : 28,
+                        "object" : {
+                          "type" : "Identifier",
+                          "start" : 0,
+                          "end" : 15,
+                          "optional" : false,
+                          "refUid" : 5,
+                          "name" : "response1",
+                          "contextUid" : "64e9f799-a2f0-49ec-8be4-65a1709d27ac"
+                        },
+                        "property" : {
+                          "type" : "Identifier",
+                          "start" : 0,
+                          "end" : 27,
+                          "optional" : false,
+                          "refUid" : 8,
+                          "name" : "index",
+                          "contextUid" : "f59a01da-d8d4-4ae9-a40d-43b8ec6cbefd"
+                        },
+                        "computed" : true,
+                        "optional" : false
+                      },
+                      "property" : {
+                        "type" : "Identifier",
+                        "start" : 29,
+                        "end" : 31,
+                        "name" : "ID"
+                      },
+                      "computed" : false,
+                      "optional" : false
+                    }
+                  } ],
+                  "sourceType" : "script"
+                }
+              }
+            },
+            "name" : "value"
+          }, {
+            "type" : "expression",
+            "value" : {
+              "type" : "Program",
+              "start" : 0,
+              "end" : 4,
+              "body" : [ {
+                "type" : "ExpressionStatement",
+                "start" : 0,
+                "end" : 4,
+                "expression" : {
+                  "type" : "Literal",
+                  "start" : 0,
+                  "end" : 4,
+                  "value" : true,
+                  "raw" : "true"
+                }
+              } ],
+              "sourceType" : "script"
+            },
+            "name" : "mergeProperties"
+          } ]
+        },
+        "type" : "call",
+        "activity" : {
+          "module" : {
+            "containerId" : "irpa_core",
+            "id" : "variable",
+            "uid" : "ed521d70-d2b5-3286-848b-8acd783a6b43"
+          },
+          "className" : null,
+          "activityId" : "set"
+        },
+        "outputMapping" : {
+          "value" : {
+            "type" : "expression",
+            "context" : {
+              "f3738ef1-c84f-4def-985f-ca093cb38c48" : {
+                "origin" : "statement",
+                "ref" : "11"
+              }
+            },
+            "value" : {
+              "type" : "Program",
+              "start" : 0,
+              "end" : 16,
+              "body" : [ {
+                "type" : "ExpressionStatement",
+                "start" : 0,
+                "end" : 16,
+                "expression" : {
+                  "type" : "Identifier",
+                  "start" : 0,
+                  "end" : 16,
+                  "optional" : false,
+                  "refUid" : 11,
+                  "name" : "myVariable",
+                  "contextUid" : "f3738ef1-c84f-4def-985f-ca093cb38c48"
+                }
+              } ],
+              "sourceType" : "script"
+            }
+          }
+        }
+      }, {
+        "id" : "9",
+        "name" : "Log Message",
+        "active" : true,
+        "metadata" : null,
+        "annotation" : null,
+        "inputMapping" : {
+          "type" : "positional",
+          "arguments" : [ {
+            "type" : "expression",
+            "context" : {
+              "b23435b0-7416-433f-a705-76313f7d413d" : {
+                "origin" : "statement",
+                "ref" : "11"
+              }
+            },
+            "value" : {
+              "type" : "Program",
+              "start" : 0,
+              "end" : 16,
+              "body" : [ {
+                "type" : "ExpressionStatement",
+                "start" : 0,
+                "end" : 16,
+                "expression" : {
+                  "type" : "Identifier",
+                  "start" : 0,
+                  "end" : 16,
+                  "optional" : false,
+                  "refUid" : 11,
+                  "name" : "myVariable",
+                  "contextUid" : "b23435b0-7416-433f-a705-76313f7d413d"
+                }
+              } ],
+              "sourceType" : "script"
+            },
+            "name" : "message"
+          }, {
+            "type" : "expression",
+            "context" : { },
+            "value" : {
+              "type" : "Program",
+              "start" : 0,
+              "end" : 9,
+              "body" : [ {
+                "type" : "ExpressionStatement",
+                "start" : 0,
+                "end" : 9,
+                "expression" : {
+                  "type" : "Identifier",
+                  "start" : 0,
+                  "end" : 9,
+                  "name" : "undefined"
+                }
+              } ],
+              "sourceType" : "script"
+            },
+            "name" : "type"
+          }, {
+            "type" : "expression",
+            "context" : { },
+            "value" : {
+              "type" : "Program",
+              "start" : 0,
+              "end" : 9,
+              "body" : [ {
+                "type" : "ExpressionStatement",
+                "start" : 0,
+                "end" : 9,
+                "expression" : {
+                  "type" : "Identifier",
+                  "start" : 0,
+                  "end" : 9,
+                  "name" : "undefined"
+                }
+              } ],
+              "sourceType" : "script"
+            },
+            "name" : "label"
+          } ]
+        },
+        "type" : "call",
+        "activity" : {
+          "module" : {
+            "containerId" : "irpa_core",
+            "id" : "core",
+            "uid" : "aab5ad95-d8dd-3ea2-b24d-17c88b53b37c"
+          },
+          "className" : null,
+          "activityId" : "log"
+        },
+        "inputsAreReadOnly" : false
+      }, {
+        "id" : "10",
+        "name" : "Custom script -body",
+        "active" : true,
+        "metadata" : null,
+        "annotation" : null,
+        "outputMapping" : {
+          "data" : "data"
+        },
+        "inputMapping" : {
+          "type" : "positional",
+          "arguments" : [ {
+            "type" : "expression",
+            "context" : {
+              "38427411-1681-4723-a531-d417f542e240" : {
+                "origin" : "statement",
+                "ref" : "11"
+              }
+            },
+            "value" : {
+              "type" : "Program",
+              "start" : 0,
+              "end" : 16,
+              "body" : [ {
+                "type" : "ExpressionStatement",
+                "start" : 0,
+                "end" : 16,
+                "expression" : {
+                  "type" : "Identifier",
+                  "start" : 0,
+                  "end" : 16,
+                  "optional" : false,
+                  "refUid" : 11,
+                  "name" : "myVariable",
+                  "contextUid" : "38427411-1681-4723-a531-d417f542e240"
+                }
+              } ],
+              "sourceType" : "script"
+            },
+            "name" : "data"
+          } ]
+        },
+        "type" : "script",
+        "header" : {
+          "inputs" : [ {
+            "description" : "",
+            "identifier" : "data",
+            "type" : "complex",
+            "typeName" : "mailData",
+            "typeValue" : "$.ea369a14-f794-44a8-b43a-47b073529ba9",
+            "dimension" : 0,
+            "container" : {
+              "projectUid" : "6815ac37-048e-4be0-89a1-747dfda4566e"
+            }
+          } ],
+          "outputs" : [ {
+            "description" : "",
+            "identifier" : "data",
+            "type" : "simple",
+            "typeName" : "string",
+            "typeValue" : "string",
+            "dimension" : 0,
+            "container" : null
+          } ]
+        },
+        "contentUid" : "25d56074-20cb-4fca-a713-ccfe4eb7a18d"
+      }, {
+        "id" : "13",
+        "name" : "Send Email (Outlook)",
+        "active" : true,
+        "metadata" : null,
+        "annotation" : null,
+        "inputMapping" : {
+          "type" : "positional",
+          "arguments" : [ {
+            "type" : "data-object",
+            "value" : {
+              "containerId" : "irpa_outlook",
+              "id" : "emailItemParameters",
+              "uid" : "532ff9d9-9040-3db8-ae61-fadb6b1983ae",
+              "refName" : "Email Parameters"
+            },
+            "attributes" : {
+              "To" : {
+                "type" : "expression",
+                "context" : {
+                  "957254d6-f4de-4b42-a0ec-e84bdea2fd2e" : {
+                    "origin" : "parent"
+                  }
+                },
+                "value" : {
+                  "type" : "Program",
+                  "start" : 0,
+                  "end" : 8,
+                  "body" : [ {
+                    "type" : "ExpressionStatement",
+                    "start" : 0,
+                    "end" : 8,
+                    "expression" : {
+                      "type" : "Identifier",
+                      "start" : 0,
+                      "end" : 8,
+                      "optional" : false,
+                      "refUid" : 0,
+                      "name" : "TO",
+                      "contextUid" : "957254d6-f4de-4b42-a0ec-e84bdea2fd2e"
+                    }
+                  } ],
+                  "sourceType" : "script"
+                }
+              },
+              "CC" : {
+                "type" : "expression",
+                "context" : { },
+                "value" : {
+                  "type" : "Program",
+                  "start" : 0,
+                  "end" : 9,
+                  "body" : [ {
+                    "type" : "ExpressionStatement",
+                    "start" : 0,
+                    "end" : 9,
+                    "expression" : {
+                      "type" : "Identifier",
+                      "start" : 0,
+                      "end" : 9,
+                      "name" : "undefined"
+                    }
+                  } ],
+                  "sourceType" : "script"
+                }
+              },
+              "BCC" : {
+                "type" : "expression",
+                "context" : { },
+                "value" : {
+                  "type" : "Program",
+                  "start" : 0,
+                  "end" : 9,
+                  "body" : [ {
+                    "type" : "ExpressionStatement",
+                    "start" : 0,
+                    "end" : 9,
+                    "expression" : {
+                      "type" : "Identifier",
+                      "start" : 0,
+                      "end" : 9,
+                      "name" : "undefined"
+                    }
+                  } ],
+                  "sourceType" : "script"
+                }
+              },
+              "Subject" : {
+                "type" : "expression",
+                "context" : {
+                  "69e4d591-2fcb-4503-adce-28cda49dcceb" : {
+                    "origin" : "statement",
+                    "ref" : "11"
+                  }
+                },
+                "value" : {
+                  "type" : "Program",
+                  "start" : 0,
+                  "end" : 42,
+                  "body" : [ {
+                    "type" : "ExpressionStatement",
+                    "start" : 0,
+                    "end" : 42,
+                    "expression" : {
+                      "type" : "BinaryExpression",
+                      "start" : 0,
+                      "end" : 42,
+                      "left" : {
+                        "type" : "Literal",
+                        "start" : 0,
+                        "end" : 18,
+                        "value" : "MaintRequestNo: ",
+                        "raw" : "\"MaintRequestNo: \""
+                      },
+                      "operator" : "+",
+                      "right" : {
+                        "type" : "MemberExpression",
+                        "start" : 21,
+                        "end" : 42,
+                        "object" : {
+                          "type" : "Identifier",
+                          "start" : 0,
+                          "end" : 37,
+                          "optional" : false,
+                          "refUid" : 11,
+                          "name" : "myVariable",
+                          "contextUid" : "69e4d591-2fcb-4503-adce-28cda49dcceb"
+                        },
+                        "property" : {
+                          "type" : "Identifier",
+                          "start" : 38,
+                          "end" : 42,
+                          "name" : "mrNo"
+                        },
+                        "computed" : false,
+                        "optional" : false
+                      }
+                    }
+                  } ],
+                  "sourceType" : "script"
+                }
+              },
+              "Body" : {
+                "type" : "expression",
+                "context" : {
+                  "5f612bd3-c01c-411a-b8be-fd52812e9ab3" : {
+                    "origin" : "statement",
+                    "ref" : "10"
+                  }
+                },
+                "value" : {
+                  "type" : "Program",
+                  "start" : 0,
+                  "end" : 10,
+                  "body" : [ {
+                    "type" : "ExpressionStatement",
+                    "start" : 0,
+                    "end" : 10,
+                    "expression" : {
+                      "type" : "Identifier",
+                      "start" : 0,
+                      "end" : 10,
+                      "optional" : false,
+                      "refUid" : 10,
+                      "name" : "data",
+                      "contextUid" : "5f612bd3-c01c-411a-b8be-fd52812e9ab3"
+                    }
+                  } ],
+                  "sourceType" : "script"
+                }
+              },
+              "isHtmlBody" : {
+                "type" : "expression",
+                "value" : {
+                  "type" : "Program",
+                  "start" : 0,
+                  "end" : 5,
+                  "body" : [ {
+                    "type" : "ExpressionStatement",
+                    "start" : 0,
+                    "end" : 5,
+                    "expression" : {
+                      "type" : "Literal",
+                      "start" : 0,
+                      "end" : 5,
+                      "value" : false,
+                      "raw" : "false"
+                    }
+                  } ],
+                  "sourceType" : "script"
+                }
+              },
+              "Attachments[0]" : {
+                "type" : "expression",
+                "context" : {
+                  "66a5470e-e097-47fc-b26b-2e0c282ad662" : {
+                    "origin" : "parent"
+                  }
+                },
+                "value" : {
+                  "type" : "Program",
+                  "start" : 0,
+                  "end" : 16,
+                  "body" : [ {
+                    "type" : "ExpressionStatement",
+                    "start" : 0,
+                    "end" : 16,
+                    "expression" : {
+                      "type" : "Identifier",
+                      "start" : 0,
+                      "end" : 16,
+                      "optional" : false,
+                      "refUid" : 0,
+                      "name" : "Attachment",
+                      "contextUid" : "66a5470e-e097-47fc-b26b-2e0c282ad662"
+                    }
+                  } ],
+                  "sourceType" : "script"
+                }
+              }
+            },
+            "name" : "emailItemParameters"
+          } ]
+        },
+        "type" : "call",
+        "activity" : {
+          "module" : {
+            "containerId" : "irpa_outlook",
+            "id" : "email",
+            "uid" : "72ac3c04-38a6-3298-92bb-fe2ef0a27750"
+          },
+          "className" : null,
+          "activityId" : "send"
+        },
+        "inputsAreReadOnly" : false
+      }, {
+        "id" : "16",
+        "name" : "Custom script -deactivate entity",
+        "active" : true,
+        "metadata" : null,
+        "annotation" : null,
+        "inputMapping" : {
+          "type" : "positional",
+          "arguments" : [ {
+            "type" : "expression",
+            "context" : {
+              "98b8b2af-97bd-4181-a3f1-3377b9d5d210" : {
+                "origin" : "statement",
+                "ref" : "11"
+              }
+            },
+            "value" : {
+              "type" : "Program",
+              "start" : 0,
+              "end" : 19,
+              "body" : [ {
+                "type" : "ExpressionStatement",
+                "start" : 0,
+                "end" : 19,
+                "expression" : {
+                  "type" : "MemberExpression",
+                  "start" : 0,
+                  "end" : 19,
+                  "object" : {
+                    "type" : "Identifier",
+                    "start" : 0,
+                    "end" : 16,
+                    "optional" : false,
+                    "refUid" : 11,
+                    "name" : "myVariable",
+                    "contextUid" : "98b8b2af-97bd-4181-a3f1-3377b9d5d210"
+                  },
+                  "property" : {
+                    "type" : "Identifier",
+                    "start" : 17,
+                    "end" : 19,
+                    "name" : "ID"
+                  },
+                  "computed" : false,
+                  "optional" : false
+                }
+              } ],
+              "sourceType" : "script"
+            },
+            "name" : "ID"
+          } ]
+        },
+        "type" : "script",
+        "header" : {
+          "inputs" : [ {
+            "description" : "",
+            "identifier" : "ID",
+            "type" : "simple",
+            "typeName" : "string",
+            "typeValue" : "string",
+            "dimension" : 0,
+            "container" : null
+          } ],
+          "outputs" : [ ]
+        },
+        "contentUid" : "9acf05d1-4120-4d19-b472-90f6880465ce"
+      }, {
+        "id" : "15",
+        "name" : "Custom script - patch",
+        "active" : true,
+        "metadata" : null,
+        "annotation" : null,
+        "inputMapping" : {
+          "type" : "positional",
+          "arguments" : [ {
+            "type" : "expression",
+            "context" : {
+              "4ee0f9d5-5c8c-4877-8a67-97740ae6f271" : {
+                "origin" : "statement",
+                "ref" : "11"
+              }
+            },
+            "value" : {
+              "type" : "Program",
+              "start" : 0,
+              "end" : 19,
+              "body" : [ {
+                "type" : "ExpressionStatement",
+                "start" : 0,
+                "end" : 19,
+                "expression" : {
+                  "type" : "MemberExpression",
+                  "start" : 0,
+                  "end" : 19,
+                  "object" : {
+                    "type" : "Identifier",
+                    "start" : 0,
+                    "end" : 16,
+                    "optional" : false,
+                    "refUid" : 11,
+                    "name" : "myVariable",
+                    "contextUid" : "4ee0f9d5-5c8c-4877-8a67-97740ae6f271"
+                  },
+                  "property" : {
+                    "type" : "Identifier",
+                    "start" : 17,
+                    "end" : 19,
+                    "name" : "ID"
+                  },
+                  "computed" : false,
+                  "optional" : false
+                }
+              } ],
+              "sourceType" : "script"
+            },
+            "name" : "ID"
+          } ]
+        },
+        "type" : "script",
+        "header" : {
+          "inputs" : [ {
+            "description" : "",
+            "identifier" : "ID",
+            "type" : "simple",
+            "typeName" : "string",
+            "typeValue" : "string",
+            "dimension" : 0,
+            "container" : null
+          } ],
+          "outputs" : [ ]
+        },
+        "contentUid" : "65fc9115-7be2-4107-ae64-aadee0dabcbf"
+      }, {
+        "id" : "17",
+        "name" : "Custom script -activate entity",
+        "active" : true,
+        "metadata" : null,
+        "annotation" : null,
+        "inputMapping" : {
+          "type" : "positional",
+          "arguments" : [ {
+            "type" : "expression",
+            "context" : {
+              "389711ff-8222-49db-ba90-095993abb377" : {
+                "origin" : "statement",
+                "ref" : "11"
+              }
+            },
+            "value" : {
+              "type" : "Program",
+              "start" : 0,
+              "end" : 19,
+              "body" : [ {
+                "type" : "ExpressionStatement",
+                "start" : 0,
+                "end" : 19,
+                "expression" : {
+                  "type" : "MemberExpression",
+                  "start" : 0,
+                  "end" : 19,
+                  "object" : {
+                    "type" : "Identifier",
+                    "start" : 0,
+                    "end" : 16,
+                    "optional" : false,
+                    "refUid" : 11,
+                    "name" : "myVariable",
+                    "contextUid" : "389711ff-8222-49db-ba90-095993abb377"
+                  },
+                  "property" : {
+                    "type" : "Identifier",
+                    "start" : 17,
+                    "end" : 19,
+                    "name" : "ID"
+                  },
+                  "computed" : false,
+                  "optional" : false
+                }
+              } ],
+              "sourceType" : "script"
+            },
+            "name" : "ID"
+          } ]
+        },
+        "type" : "script",
+        "header" : {
+          "inputs" : [ {
+            "description" : "",
+            "identifier" : "ID",
+            "type" : "simple",
+            "typeName" : "string",
+            "typeValue" : "string",
+            "dimension" : 0,
+            "container" : null
+          } ],
+          "outputs" : [ ]
+        },
+        "contentUid" : "3bfa661a-2c87-4771-9cb1-aa9ac17ca965"
+      }, {
+        "id" : "18",
+        "name" : "Information Dialog",
+        "active" : false,
+        "metadata" : null,
+        "annotation" : null,
+        "outputMapping" : {
+          "clickedButton" : "clickedButton"
+        },
+        "inputMapping" : {
+          "type" : "positional",
+          "arguments" : [ {
+            "type" : "data-object",
+            "value" : {
+              "containerId" : "irpa_core",
+              "id" : "messageDialogParameters",
+              "uid" : "2cd73515-255d-30dc-a2c1-129dfdcbe319",
+              "refName" : "Simple Info Dialog Parameters"
+            },
+            "attributes" : {
+              "message" : {
+                "type" : "expression",
+                "context" : { },
+                "value" : {
+                  "type" : "Program",
+                  "start" : 0,
+                  "end" : 31,
+                  "body" : [ {
+                    "type" : "ExpressionStatement",
+                    "start" : 0,
+                    "end" : 31,
+                    "expression" : {
+                      "type" : "MemberExpression",
+                      "start" : 0,
+                      "end" : 31,
+                      "object" : {
+                        "type" : "MemberExpression",
+                        "start" : 0,
+                        "end" : 28,
+                        "object" : {
+                          "type" : "MemberExpression",
+                          "start" : 0,
+                          "end" : 15,
+                          "object" : {
+                            "type" : "Identifier",
+                            "start" : 0,
+                            "end" : 5,
+                            "name" : "Step4"
+                          },
+                          "property" : {
+                            "type" : "Identifier",
+                            "start" : 6,
+                            "end" : 15,
+                            "name" : "response1"
+                          },
+                          "computed" : false,
+                          "optional" : false
+                        },
+                        "property" : {
+                          "type" : "MemberExpression",
+                          "start" : 16,
+                          "end" : 27,
+                          "object" : {
+                            "type" : "Identifier",
+                            "start" : 16,
+                            "end" : 21,
+                            "name" : "Step5"
+                          },
+                          "property" : {
+                            "type" : "Identifier",
+                            "start" : 22,
+                            "end" : 27,
+                            "name" : "index"
+                          },
+                          "computed" : false,
+                          "optional" : false
+                        },
+                        "computed" : true,
+                        "optional" : false
+                      },
+                      "property" : {
+                        "type" : "Identifier",
+                        "start" : 29,
+                        "end" : 31,
+                        "name" : "ID"
+                      },
+                      "computed" : false,
+                      "optional" : false
+                    }
+                  } ],
+                  "sourceType" : "script"
+                }
+              },
+              "identifier" : {
+                "type" : "expression",
+                "context" : { },
+                "value" : {
+                  "type" : "Program",
+                  "start" : 0,
+                  "end" : 9,
+                  "body" : [ {
+                    "type" : "ExpressionStatement",
+                    "start" : 0,
+                    "end" : 9,
+                    "expression" : {
+                      "type" : "Identifier",
+                      "start" : 0,
+                      "end" : 9,
+                      "name" : "undefined"
+                    }
+                  } ],
+                  "sourceType" : "script"
+                }
+              },
+              "template" : {
+                "type" : "expression",
+                "value" : {
+                  "type" : "Program",
+                  "start" : 0,
+                  "end" : 4,
+                  "body" : [ {
+                    "type" : "ExpressionStatement",
+                    "start" : 0,
+                    "end" : 4,
+                    "expression" : {
+                      "type" : "Literal",
+                      "start" : 0,
+                      "end" : 4,
+                      "value" : "Ok",
+                      "raw" : "\"Ok\""
+                    },
+                    "directive" : "Ok"
+                  } ],
+                  "sourceType" : "script"
+                }
+              },
+              "width" : {
+                "type" : "expression",
+                "value" : {
+                  "type" : "Program",
+                  "start" : 0,
+                  "end" : 2,
+                  "body" : [ {
+                    "type" : "ExpressionStatement",
+                    "start" : 0,
+                    "end" : 2,
+                    "expression" : {
+                      "type" : "Literal",
+                      "start" : 0,
+                      "end" : 2,
+                      "value" : "",
+                      "raw" : "\"\""
+                    },
+                    "directive" : ""
+                  } ],
+                  "sourceType" : "script"
+                }
+              },
+              "horizontalPosition" : {
+                "type" : "expression",
+                "value" : {
+                  "type" : "Program",
+                  "start" : 0,
+                  "end" : 6,
+                  "body" : [ {
+                    "type" : "ExpressionStatement",
+                    "start" : 0,
+                    "end" : 6,
+                    "expression" : {
+                      "type" : "Literal",
+                      "start" : 0,
+                      "end" : 6,
+                      "value" : "None",
+                      "raw" : "\"None\""
+                    },
+                    "directive" : "None"
+                  } ],
+                  "sourceType" : "script"
+                }
+              },
+              "verticalPosition" : {
+                "type" : "expression",
+                "value" : {
+                  "type" : "Program",
+                  "start" : 0,
+                  "end" : 6,
+                  "body" : [ {
+                    "type" : "ExpressionStatement",
+                    "start" : 0,
+                    "end" : 6,
+                    "expression" : {
+                      "type" : "Literal",
+                      "start" : 0,
+                      "end" : 6,
+                      "value" : "None",
+                      "raw" : "\"None\""
+                    },
+                    "directive" : "None"
+                  } ],
+                  "sourceType" : "script"
+                }
+              },
+              "display" : {
+                "type" : "expression",
+                "value" : {
+                  "type" : "Program",
+                  "start" : 0,
+                  "end" : 6,
+                  "body" : [ {
+                    "type" : "ExpressionStatement",
+                    "start" : 0,
+                    "end" : 6,
+                    "expression" : {
+                      "type" : "Literal",
+                      "start" : 0,
+                      "end" : 6,
+                      "value" : "Main",
+                      "raw" : "\"Main\""
+                    },
+                    "directive" : "Main"
+                  } ],
+                  "sourceType" : "script"
+                }
+              }
+            },
+            "name" : "dialogParams"
+          } ]
+        },
+        "type" : "call",
+        "activity" : {
+          "module" : {
+            "containerId" : "irpa_core",
+            "id" : "dialog",
+            "uid" : "257a399a-06dc-3ef3-9581-6d5374ab818e"
+          },
+          "className" : null,
+          "activityId" : "openMessageDialog"
+        },
+        "inputsAreReadOnly" : false
+      } ],
+      "outputMapping" : { },
+      "indexVariable" : "index",
+      "outputs" : [ ],
+      "type" : "for-each",
+      "items" : {
+        "type" : "expression",
+        "context" : {
+          "5744bb22-e368-4b07-853a-e4e375db44a7" : {
+            "origin" : "statement",
+            "ref" : "5"
+          }
+        },
+        "value" : {
+          "type" : "Program",
+          "start" : 0,
+          "end" : 15,
+          "body" : [ {
+            "type" : "ExpressionStatement",
+            "start" : 0,
+            "end" : 15,
+            "expression" : {
+              "type" : "Identifier",
+              "start" : 0,
+              "end" : 15,
+              "optional" : false,
+              "refUid" : 5,
+              "name" : "response1",
+              "contextUid" : "5744bb22-e368-4b07-853a-e4e375db44a7"
+            }
+          } ],
+          "sourceType" : "script"
+        }
+      },
+      "itemVariable" : "currentMember"
+    }, {
+      "id" : "6",
+      "name" : "Close Outlook Instance",
+      "active" : true,
+      "metadata" : null,
+      "annotation" : null,
+      "type" : "call",
+      "activity" : {
+        "module" : {
+          "containerId" : "irpa_outlook",
+          "id" : "application",
+          "uid" : "3d71a912-e5ca-3cab-9e96-cc170b200ba4"
+        },
+        "className" : null,
+        "activityId" : "closeOutlook"
+      },
+      "inputsAreReadOnly" : false
+    }, {
+      "id" : "7",
+      "name" : "Release Outlook Instance",
+      "active" : true,
+      "metadata" : null,
+      "annotation" : null,
+      "type" : "call",
+      "activity" : {
+        "module" : {
+          "containerId" : "irpa_outlook",
+          "id" : "application",
+          "uid" : "3d71a912-e5ca-3cab-9e96-cc170b200ba4"
+        },
+        "className" : null,
+        "activityId" : "release"
+      },
+      "inputsAreReadOnly" : false
+    } ],
+    "errorVariable" : "error",
+    "outputMapping" : { },
+    "catches" : [ {
+      "do" : [ ],
+      "outputMapping" : { },
+      "error" : {
+        "module" : {
+          "containerId" : "irpa_core",
+          "id" : "error",
+          "uid" : "9cab8902-34c3-37f9-a6bb-8e55279e5195"
+        },
+        "errorId" : "RequestError"
+      }
+    } ],
+    "outputs" : [ ]
+  }, {
+    "id" : "1",
+    "name" : "End",
+    "active" : true,
+    "metadata" : null,
+    "annotation" : null,
+    "type" : "end",
+    "outputMapping" : { }
+  } ],
+  "onError" : [ {
+    "id" : "2",
+    "name" : "On Error",
+    "active" : true,
+    "metadata" : null,
+    "annotation" : null,
+    "type" : "start-on-error",
+    "errorVariable" : "error"
+  }, {
+    "id" : "3",
+    "name" : "IPA_AUTOMATION_EDITOR_STATEMENT_STOP_ON_ERROR_NAME",
+    "active" : true,
+    "metadata" : null,
+    "annotation" : null,
+    "type" : "stop-on-error"
+  } ]
+}

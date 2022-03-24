@@ -1,0 +1,1 @@
+"var num = 0;\r\nvar length = response.value.length;\r\nirpa_core.core.log(length);\r\nreturn length;"

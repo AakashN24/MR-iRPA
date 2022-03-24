@@ -1,0 +1,1 @@
+"let body = \"MaintRequestNo: \" +data.mrNo+ \"\\nBusiness Partner: \" +data.BuisnessPartner+ \"\\nBusiness Partner Name: \" +data.BuisnessPartnerName+ \"\\nRevision No: \" +data.RevisionNumber+ \"\\nDear customer please share the task list to create the Maintenance request.\\n\\nMAil sent by IRPA\";\r\nreturn body;"

@@ -1,0 +1,126 @@
+{
+  "uid" : "7ee9d036-7cbb-4826-9e21-7317abb9a01b",
+  "name" : "hcl-mr-validate-bot2",
+  "identifier" : "hclmrvalidatebot2",
+  "type" : "automation",
+  "visibility" : true,
+  "activated" : true,
+  "header" : {
+    "inputs" : [ {
+      "description" : "",
+      "identifier" : "path",
+      "type" : "simple",
+      "typeName" : "string",
+      "typeValue" : "string",
+      "dimension" : 0,
+      "container" : null
+    } ],
+    "outputs" : [ ],
+    "maxDuration" : 600,
+    "maxActivityDuration" : 30,
+    "triggerable" : true,
+    "hasAddJobSubAutomations" : false,
+    "hasAlerts" : false,
+    "scriptUids" : [ "6451d469-e4ef-4160-942e-eaba7079140d", "7169119d-a186-4eca-acb7-a514bfa58d38", "cd4e5460-01d1-4b5d-8d22-e0e9a64ece79", "c0d01890-8c83-4a48-8064-be39fd3f4acc", "e591eb18-3d44-4eb6-921d-d9c56ea4dc18" ]
+  },
+  "buildHeader" : {
+    "input" : {
+      "$schema" : "http://json-schema.org/draft-07/schema#",
+      "type" : "object",
+      "properties" : {
+        "path" : {
+          "type" : "string",
+          "description" : ""
+        }
+      }
+    },
+    "output" : {
+      "$schema" : "http://json-schema.org/draft-07/schema#",
+      "type" : "object",
+      "properties" : { }
+    },
+    "internalUid" : null,
+    "triggerable" : true,
+    "maxDuration" : 600,
+    "maxActivityDuration" : 30
+  },
+  "validity" : true,
+  "dependencies" : [ {
+    "artifactUid" : "079265fd-0cc3-37ff-9896-ef34682a481b",
+    "artifactContainerUid" : "2397df40-9756-4109-ac86-39ba2d23891c",
+    "packageUid" : "105f6259-cdaf-414b-86ea-5bc670448046",
+    "packageAlias" : "irpa_excel"
+  }, {
+    "artifactUid" : "08932019-52df-3d41-8347-421faed14de4",
+    "artifactContainerUid" : "acead2d5-1351-495f-9d6d-9b49aba227eb",
+    "packageUid" : "2dbcfd22-58ea-49a2-99d6-005f5bb902c3",
+    "packageAlias" : "irpa_core"
+  }, {
+    "artifactUid" : "9cab8902-34c3-37f9-a6bb-8e55279e5195",
+    "artifactContainerUid" : "acead2d5-1351-495f-9d6d-9b49aba227eb",
+    "packageUid" : "2dbcfd22-58ea-49a2-99d6-005f5bb902c3",
+    "packageAlias" : "irpa_core"
+  }, {
+    "artifactUid" : "9d97d190-ddae-3b68-bf21-ac94e6bc05e4",
+    "artifactContainerUid" : "2397df40-9756-4109-ac86-39ba2d23891c",
+    "packageUid" : "105f6259-cdaf-414b-86ea-5bc670448046",
+    "packageAlias" : "irpa_excel"
+  }, {
+    "artifactUid" : "aab5ad95-d8dd-3ea2-b24d-17c88b53b37c",
+    "artifactContainerUid" : "acead2d5-1351-495f-9d6d-9b49aba227eb",
+    "packageUid" : "2dbcfd22-58ea-49a2-99d6-005f5bb902c3",
+    "packageAlias" : "irpa_core"
+  }, {
+    "artifactUid" : "ad8424e5-0004-31e8-b7c2-cd871847e3e3",
+    "artifactContainerUid" : "2397df40-9756-4109-ac86-39ba2d23891c",
+    "packageUid" : "105f6259-cdaf-414b-86ea-5bc670448046",
+    "packageAlias" : "irpa_excel"
+  }, {
+    "artifactUid" : "b2b39969-be3a-32e5-b4cb-3ebfacb6d3e5",
+    "artifactContainerUid" : "2397df40-9756-4109-ac86-39ba2d23891c",
+    "packageUid" : "105f6259-cdaf-414b-86ea-5bc670448046",
+    "packageAlias" : "irpa_excel"
+  } ],
+  "access" : "default",
+  "contents" : [ {
+    "uid" : "90c2bb27-c666-454b-bc2d-42646b5a59fb",
+    "name" : "6451d469-e4ef-4160-942e-eaba7079140d",
+    "mimeType" : "application/json",
+    "size" : 766,
+    "lastUpdateRelease" : "2203.00"
+  }, {
+    "uid" : "81f64a44-29c8-4360-9ec1-6cc27d8eb26f",
+    "name" : "7169119d-a186-4eca-acb7-a514bfa58d38",
+    "mimeType" : "application/json",
+    "size" : 102,
+    "lastUpdateRelease" : "2203.00"
+  }, {
+    "uid" : "118246a5-770a-4a22-96d5-b65310cbe6fc",
+    "name" : "c0d01890-8c83-4a48-8064-be39fd3f4acc",
+    "mimeType" : "application/json",
+    "size" : 725,
+    "lastUpdateRelease" : "2203.00"
+  }, {
+    "uid" : "8045976a-66d8-471a-b584-68c2a81b2c7a",
+    "name" : "cd4e5460-01d1-4b5d-8d22-e0e9a64ece79",
+    "mimeType" : "application/json",
+    "size" : 672,
+    "lastUpdateRelease" : "2203.00"
+  }, {
+    "uid" : "f018f0d4-0d39-42f5-b237-b8d2e3305eb3",
+    "name" : "content",
+    "mimeType" : "application/json",
+    "size" : 114870,
+    "lastUpdateRelease" : "2203.00"
+  }, {
+    "uid" : "4e828aa3-a21f-4150-945b-3dbff5fa1298",
+    "name" : "e591eb18-3d44-4eb6-921d-d9c56ea4dc18",
+    "mimeType" : "application/json",
+    "size" : 677,
+    "lastUpdateRelease" : "2203.00"
+  } ],
+  "exportRelease" : "2203.01",
+  "lastHeaderUpdateRelease" : "2202.04",
+  "submittable" : true,
+  "mode" : "managed"
+}
